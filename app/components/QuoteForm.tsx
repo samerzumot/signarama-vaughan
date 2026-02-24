@@ -78,6 +78,7 @@ export function QuoteForm({
         className="space-y-4"
       >
         <input type="hidden" name="_subject" value="New Quote Request - Signarama Vaughan" />
+        <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_template" value="table" />
         <input type="hidden" name="_next" value="https://www.custombusinesssigns.ca/thank-you" />
         <input type="text" name="_honey" style={{ display: "none" }} />
@@ -120,7 +121,7 @@ export function QuoteForm({
             <input
               ref={fileInputRef}
               type="file"
-              name="attachment1"
+              name="attachment"
               multiple
               accept="image/*,application/pdf"
               onChange={handleFileChange}
@@ -152,7 +153,7 @@ export function QuoteForm({
             <input
               ref={sitePhotoRef}
               type="file"
-              name="attachment2"
+              name="attachment"
               multiple
               accept="image/*"
               onChange={handleSitePhotoChange}
