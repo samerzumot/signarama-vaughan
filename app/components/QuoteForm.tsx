@@ -32,7 +32,7 @@ export function QuoteForm({
     const formData = new FormData(form);
 
     try {
-      await fetch("https://formsubmit.co/ajax/info@signarama-vaughan.com", {
+      await fetch("/api/quote", {
         method: "POST",
         body: formData,
       });
@@ -98,10 +98,6 @@ export function QuoteForm({
     <div>
       {heading && <h2 className="font-display text-display-sm text-text-primary mb-6 text-center">{heading}</h2>}
       <form onSubmit={handleSubmit} className="space-y-4">
-        <input type="hidden" name="_subject" value="New Quote Request - Signarama Vaughan" />
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="text" name="_honey" style={{ display: "none" }} />
 
         <input type="text" name="name" required placeholder="Your Name *" className={inputClass} />
         <input type="tel" name="phone" required placeholder="Phone Number *" className={inputClass} />
