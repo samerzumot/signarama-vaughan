@@ -1,20 +1,23 @@
 "use client";
 
 import { useState, useRef, FormEvent } from "react";
+import { useRouter } from "next/navigation";
 import { services } from "../lib/services";
 
 interface QuoteFormProps {
   variant?: "inline" | "modal";
   preselectedService?: string;
   heading?: string;
+  onSubmitSuccess?: () => void;
 }
 
 export function QuoteForm({
   variant = "inline",
   preselectedService,
   heading = "Get Your Free Quote",
+  onSubmitSuccess,
 }: QuoteFormProps) {
-  const [submitted, setSubmitted] = useState(false);
+  const router = useRouter();
   const [submitting, setSubmitting] = useState(false);
   const [fileNames, setFileNames] = useState<string[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -41,16 +44,14 @@ export function QuoteForm({
         method: "POST",
         body: formData,
       });
-      setSubmitted(true);
-      if (typeof window !== "undefined" && typeof window.gtag === "function") {
-        window.gtag("event", "conversion", {
-          send_to: "AW-17956192139/8e71CI6OuvkbEIv_lvJC",
-        });
-      }
     } catch {
-      setSubmitted(true);
+      // Still redirect on error so the user isn't stuck
     } finally {
       setSubmitting(false);
+      if (onSubmitSuccess) {
+        onSubmitSuccess();
+      }
+      router.push("/thank-you");
     }
   }
 
@@ -74,20 +75,6 @@ export function QuoteForm({
     setFileNames(names.slice(0, 5));
   }
 
-  if (submitted) {
-    return (
-      <div className={`text-center ${variant === "modal" ? "py-8" : "py-12"}`}>
-        <div className="w-16 h-16 bg-accent-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
-          <svg className="w-8 h-8 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-          </svg>
-        </div>
-        <h3 className="font-display text-display-sm text-text-primary mb-2">Request Received!</h3>
-        <p className="text-text-secondary mb-1">Our team will get back to you within 24 hours.</p>
-        <p className="text-text-muted text-sm">Or call us now at <a href="tel:9055978635" className="text-brand-red font-semibold">905-597-8635</a></p>
-      </div>
-    );
-  }
 
   const inputClass = "w-full px-4 py-3 border border-surface-light rounded-card text-base focus:outline-none focus:border-brand-red focus:ring-2 focus:ring-brand-red/10 transition-all bg-white";
 
