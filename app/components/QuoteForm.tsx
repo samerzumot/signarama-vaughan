@@ -20,7 +20,9 @@ export function QuoteForm({
   const router = useRouter();
   const [submitting, setSubmitting] = useState(false);
   const [fileNames, setFileNames] = useState<string[]>([]);
+  const [sitePhotoNames, setSitePhotoNames] = useState<string[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const sitePhotoRef = useRef<HTMLInputElement>(null);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -30,14 +32,24 @@ export function QuoteForm({
     const formData = new FormData(form);
 
     // FormSubmit supports up to 5 attachments named attachment1-5
-    const files = fileInputRef.current?.files;
-    if (files) {
-      for (let i = 0; i < Math.min(files.length, 5); i++) {
-        formData.append(`attachment${i + 1}`, files[i]);
+    let attachIdx = 1;
+    const designFiles = fileInputRef.current?.files;
+    if (designFiles) {
+      for (let i = 0; i < designFiles.length && attachIdx <= 5; i++) {
+        formData.append(`attachment${attachIdx}`, designFiles[i]);
+        attachIdx++;
       }
     }
-    // Remove the visual file input from formData
+    const siteFiles = sitePhotoRef.current?.files;
+    if (siteFiles) {
+      for (let i = 0; i < siteFiles.length && attachIdx <= 5; i++) {
+        formData.append(`attachment${attachIdx}`, siteFiles[i]);
+        attachIdx++;
+      }
+    }
+    // Remove the visual file inputs from formData
     formData.delete("design_upload");
+    formData.delete("site_photo");
 
     try {
       await fetch("https://formsubmit.co/ajax/info@signarama-vaughan.com", {
@@ -55,24 +67,49 @@ export function QuoteForm({
     }
   }
 
+  function getTotalFileSize() {
+    let total = 0;
+    const designFiles = fileInputRef.current?.files;
+    if (designFiles) {
+      for (let i = 0; i < designFiles.length; i++) total += designFiles[i].size;
+    }
+    const siteFiles = sitePhotoRef.current?.files;
+    if (siteFiles) {
+      for (let i = 0; i < siteFiles.length; i++) total += siteFiles[i].size;
+    }
+    return total;
+  }
+
   function handleFileChange() {
     const files = fileInputRef.current?.files;
     if (!files) return;
 
-    // Check total size (10MB limit)
-    let totalSize = 0;
     const names: string[] = [];
-    for (let i = 0; i < files.length; i++) {
-      totalSize += files[i].size;
-      names.push(files[i].name);
-    }
-    if (totalSize > 10 * 1024 * 1024) {
+    for (let i = 0; i < files.length; i++) names.push(files[i].name);
+
+    if (getTotalFileSize() > 10 * 1024 * 1024) {
       alert("Total file size exceeds 10MB limit. Please reduce file size or quantity.");
       if (fileInputRef.current) fileInputRef.current.value = "";
       setFileNames([]);
       return;
     }
     setFileNames(names.slice(0, 5));
+  }
+
+  function handleSitePhotoChange() {
+    const files = sitePhotoRef.current?.files;
+    if (!files) return;
+
+    const names: string[] = [];
+    for (let i = 0; i < files.length; i++) names.push(files[i].name);
+
+    if (getTotalFileSize() > 10 * 1024 * 1024) {
+      alert("Total file size exceeds 10MB limit. Please reduce file size or quantity.");
+      if (sitePhotoRef.current) sitePhotoRef.current.value = "";
+      setSitePhotoNames([]);
+      return;
+    }
+    setSitePhotoNames(names.slice(0, 5));
   }
 
 
@@ -90,6 +127,8 @@ export function QuoteForm({
         <input type="text" name="name" required placeholder="Your Name *" className={inputClass} />
         <input type="tel" name="phone" required placeholder="Phone Number *" className={inputClass} />
         <input type="email" name="email" required placeholder="Email Address *" className={inputClass} />
+        <input type="text" name="business_name" placeholder="Business Name (Optional)" className={inputClass} />
+        <input type="text" name="business_address" placeholder="Business Address (Optional)" className={inputClass} />
         <select
           name="sign_type"
           defaultValue={preselectedService || ""}
@@ -133,6 +172,38 @@ export function QuoteForm({
           {fileNames.length > 0 && (
             <div className="mt-3 space-y-1">
               {fileNames.map((name, i) => (
+                <p key={i} className="text-xs text-text-secondary truncate">{name}</p>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Site Photo Upload */}
+        <div className="border-2 border-dashed border-surface-light rounded-card p-4 text-center hover:border-brand-red/30 transition-colors">
+          <label className="cursor-pointer block">
+            <div className="flex flex-col items-center gap-2">
+              <svg className="w-6 h-6 text-text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span className="text-sm font-semibold text-text-secondary">
+                Upload Site Photo (Optional)
+              </span>
+              <span className="text-xs text-text-muted">Photo of installation location, max 10MB total</span>
+            </div>
+            <input
+              ref={sitePhotoRef}
+              type="file"
+              name="site_photo"
+              multiple
+              accept="image/*"
+              onChange={handleSitePhotoChange}
+              className="hidden"
+            />
+          </label>
+          {sitePhotoNames.length > 0 && (
+            <div className="mt-3 space-y-1">
+              {sitePhotoNames.map((name, i) => (
                 <p key={i} className="text-xs text-text-secondary truncate">{name}</p>
               ))}
             </div>
