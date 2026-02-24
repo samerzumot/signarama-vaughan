@@ -32,7 +32,7 @@ export function QuoteForm({
     const formData = new FormData(form);
 
     try {
-      await fetch("/api/quote", {
+      await fetch("https://formsubmit.co/ajax/info@signarama-vaughan.com", {
         method: "POST",
         body: formData,
       });
