@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
     `;
 
         const { error } = await resend.emails.send({
-            from: "Signarama Vaughan <onboarding@resend.dev>",
+            from: "Signarama Vaughan <quotes@custombusinesssigns.ca>",
             to: "info@signarama-vaughan.com",
             replyTo: email,
             subject: `New Quote Request from ${name}`,
