@@ -95,9 +95,9 @@ export default function RootLayout({
         <QuoteModal />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-17956192139"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="gtag-init" strategy="afterInteractive">
+        <Script id="gtag-init" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
