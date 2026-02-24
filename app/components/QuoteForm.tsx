@@ -80,7 +80,7 @@ export function QuoteForm({
         <input type="hidden" name="_subject" value="New Quote Request - Signarama Vaughan" />
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_next" value="https://signarama-vaughan.vercel.app/thank-you" />
+        <input type="hidden" name="_next" value="https://www.custombusinesssigns.ca/thank-you" />
         <input type="text" name="_honey" style={{ display: "none" }} />
 
         <input type="text" name="name" required placeholder="Your Name *" className={inputClass} />
