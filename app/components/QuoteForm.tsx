@@ -31,10 +31,7 @@ export function QuoteForm({
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    // Re-attach files under FormSubmit's expected "attachment" naming
-    formData.delete("design_upload");
-    formData.delete("site_photo");
-
+    // FormSubmit supports up to 5 attachments named attachment1-5
     let attachIdx = 1;
     const designFiles = fileInputRef.current?.files;
     if (designFiles) {
@@ -50,6 +47,9 @@ export function QuoteForm({
         attachIdx++;
       }
     }
+    // Remove the original file inputs from formData so they aren't sent twice
+    formData.delete("design_upload");
+    formData.delete("site_photo");
 
     try {
       await fetch("https://formsubmit.co/ajax/info@signarama-vaughan.com", {
