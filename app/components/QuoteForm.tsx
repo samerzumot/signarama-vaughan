@@ -127,8 +127,8 @@ export function QuoteForm({
         <input type="text" name="name" required placeholder="Your Name *" className={inputClass} />
         <input type="tel" name="phone" required placeholder="Phone Number *" className={inputClass} />
         <input type="email" name="email" required placeholder="Email Address *" className={inputClass} />
-        <input type="text" name="business_name" placeholder="Business Name (Optional)" className={inputClass} />
-        <input type="text" name="business_address" placeholder="Business Address (Optional)" className={inputClass} />
+        <input type="text" name="business_name" placeholder="Business Name" className={inputClass} />
+        <input type="text" name="business_address" placeholder="Business Address" className={inputClass} />
         <select
           name="sign_type"
           defaultValue={preselectedService || ""}
@@ -155,7 +155,7 @@ export function QuoteForm({
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
               <span className="text-sm font-semibold text-text-secondary">
-                Upload Design (Optional)
+                Upload Design
               </span>
               <span className="text-xs text-text-muted">Images or PDF, max 10MB total</span>
             </div>
@@ -187,7 +187,7 @@ export function QuoteForm({
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
               <span className="text-sm font-semibold text-text-secondary">
-                Upload Site Photo (Optional)
+                Upload Site Photo
               </span>
               <span className="text-xs text-text-muted">Photo of installation location, max 10MB total</span>
             </div>
