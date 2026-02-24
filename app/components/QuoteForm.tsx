@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, FormEvent } from "react";
+import { useRouter } from "next/navigation";
 import { services } from "../lib/services";
 
 interface QuoteFormProps {
@@ -16,10 +17,38 @@ export function QuoteForm({
   heading = "Get Your Free Quote",
   onSubmitSuccess,
 }: QuoteFormProps) {
+  const router = useRouter();
+  const [submitting, setSubmitting] = useState(false);
   const [fileNames, setFileNames] = useState<string[]>([]);
   const [sitePhotoNames, setSitePhotoNames] = useState<string[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const sitePhotoRef = useRef<HTMLInputElement>(null);
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setSubmitting(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    // FormSubmit expects files under the name "attachment"
+    // The file inputs already use name="attachment" so they are included in formData automatically
+
+    try {
+      await fetch("https://formsubmit.co/ajax/info@signarama-vaughan.com", {
+        method: "POST",
+        body: formData,
+      });
+    } catch {
+      // Still redirect on error so the user isn't stuck
+    } finally {
+      setSubmitting(false);
+      if (onSubmitSuccess) {
+        onSubmitSuccess();
+      }
+      router.push("/thank-you");
+    }
+  }
 
   function getTotalFileSize() {
     let total = 0;
@@ -71,16 +100,10 @@ export function QuoteForm({
   return (
     <div>
       {heading && <h2 className="font-display text-display-sm text-text-primary mb-6 text-center">{heading}</h2>}
-      <form
-        action="https://formsubmit.co/info@signarama-vaughan.com"
-        method="POST"
-        encType="multipart/form-data"
-        className="space-y-4"
-      >
+      <form onSubmit={handleSubmit} className="space-y-4">
         <input type="hidden" name="_subject" value="New Quote Request - Signarama Vaughan" />
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_next" value="https://www.custombusinesssigns.ca/thank-you" />
         <input type="text" name="_honey" style={{ display: "none" }} />
 
         <input type="text" name="name" required placeholder="Your Name *" className={inputClass} />
@@ -171,9 +194,10 @@ export function QuoteForm({
 
         <button
           type="submit"
-          className="btn-primary w-full"
+          disabled={submitting}
+          className="btn-primary w-full disabled:opacity-60"
         >
-          Get My Free Quote
+          {submitting ? "Sending..." : "Get My Free Quote"}
         </button>
         <p className="text-text-muted text-xs text-center">We respond within 24 hours. Your info is never shared.</p>
       </form>
