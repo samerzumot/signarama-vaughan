@@ -25,7 +25,7 @@ export default function HomePage() {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src="https://custombusinesssigns.ca/cdn/shop/t/5/assets/signarama-video.mp4" type="video/mp4" />
+            <source src="/signarama-video.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
         </div>
