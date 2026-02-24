@@ -31,11 +31,8 @@ export function QuoteForm({
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    // FormSubmit expects files under the name "attachment"
-    // The file inputs already use name="attachment" so they are included in formData automatically
-
     try {
-      await fetch("https://formsubmit.co/ajax/info@signarama-vaughan.com", {
+      await fetch("/api/quote", {
         method: "POST",
         body: formData,
       });
