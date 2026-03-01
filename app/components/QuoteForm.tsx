@@ -3,6 +3,7 @@
 import { useState, useRef, FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import { services } from "../lib/services";
+import { reportFormLeadConversion } from "../lib/gtag";
 
 interface QuoteFormProps {
   variant?: "inline" | "modal";
@@ -37,13 +38,18 @@ export function QuoteForm({
         body: formData,
       });
     } catch {
-      // Still redirect on error so the user isn't stuck
+      // Continue even on fetch error so the user isn't stuck
     } finally {
       setSubmitting(false);
       if (onSubmitSuccess) {
         onSubmitSuccess();
       }
-      router.push("/thank-you");
+      // Fire the Google Ads form-lead conversion first.
+      // The redirect runs inside the event_callback so gtag can
+      // send the conversion beacon before the page navigates away.
+      reportFormLeadConversion(() => {
+        router.push("/thank-you");
+      });
     }
   }
 

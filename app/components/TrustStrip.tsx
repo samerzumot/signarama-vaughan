@@ -2,7 +2,7 @@ export function TrustStrip() {
   return (
     <section className="bg-surface-cream py-12 border-y border-surface-light">
       <div className="container-content">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           <TrustItem
             icon={<CanadaIcon />}
             title="Locally Sourced Materials"
@@ -56,6 +56,14 @@ function ShieldIcon() {
   return (
     <svg className="w-10 h-10" viewBox="0 0 24 24" fill="currentColor">
       <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+    </svg>
+  );
+}
+
+function LocationIcon() {
+  return (
+    <svg className="w-10 h-10 text-brand-red" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
     </svg>
   );
 }

@@ -108,7 +108,7 @@ export default function HomePage() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Signarama Vaughan location"
+                title="Custom Business Signs location"
               />
             </div>
             <div className="text-center">

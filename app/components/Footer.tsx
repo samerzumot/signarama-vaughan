@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { PHONE_NUMBER, PHONE_HREF } from "../lib/gtag";
 
 const serviceLinks = [
@@ -76,9 +75,9 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <Image src="/images/logo.webp" alt="Signarama Vaughan" width={140} height={40} className="h-8 w-auto brightness-0 invert opacity-60" />
+          <span className="text-white/60 text-sm font-bold">Custom Business Signs</span>
           <p className="text-white/40 text-sm">Proudly serving the Greater Toronto Area.</p>
-          <p className="text-white/30 text-xs">&copy; {new Date().getFullYear()} Signarama Vaughan. All Rights Reserved.</p>
+          <p className="text-white/30 text-xs">&copy; {new Date().getFullYear()} Custom Business Signs. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

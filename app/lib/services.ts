@@ -20,7 +20,7 @@ export const services: Service[] = [
     slug: "channel-letters",
     title: "Channel Letters",
     shortDescription: "Vibrant, individual LED-illuminated letters that offer maximum visibility night and day.",
-    longDescription: "Channel letters are three-dimensional, individually fabricated letters commonly used for building signage. Each letter contains LED modules that illuminate the face, creating a bold, professional look that draws attention 24/7. They are the go-to choice for retail stores, restaurants, corporate offices, and franchises looking for high-impact exterior signage. At Signarama Vaughan, we fabricate channel letters in-house using premium aluminum and acrylic, with energy-efficient LEDs rated for 50,000+ hours of operation.",
+    longDescription: "Channel letters are three-dimensional, individually fabricated letters commonly used for building signage. Each letter contains LED modules that illuminate the face, creating a bold, professional look that draws attention 24/7. They are the go-to choice for retail stores, restaurants, corporate offices, and franchises looking for high-impact exterior signage. We fabricate channel letters in-house using premium aluminum and acrylic, with energy-efficient LEDs rated for 50,000+ hours of operation.",
     image: "/images/services/channel-letters.jpg",
     heroImage: "/images/heroes/channel-letters-night.jpg",
     features: ["Front-lit (face illuminated)", "Reverse-lit / Halo-lit (backglow effect)", "Open-face (exposed neon or LED)", "Combination front and back lit", "Custom colors and finishes", "Energy-efficient LED modules"],

@@ -34,16 +34,16 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Custom Signs & Signage Company in Vaughan | Signarama",
-    template: "%s | Signarama Vaughan",
+    default: "Custom Business Signs | GTA Sign Company",
+    template: "%s | Custom Business Signs",
   },
   description:
-    "Signarama Vaughan designs, fabricates, and installs custom signs for businesses across the GTA. Channel letters, storefront signs, vehicle wraps & more. Call (905) 597-8635.",
+    "Custom Business Signs designs, fabricates, and installs custom signs for businesses across the GTA. Channel letters, storefront signs, vehicle wraps & more. Call (905) 597-8635.",
   metadataBase: new URL("https://custombusinesssigns.ca"),
   openGraph: {
     type: "website",
     locale: "en_CA",
-    siteName: "Signarama Vaughan",
+    siteName: "Custom Business Signs",
     images: [{ url: "/images/og-image.jpg", width: 1200, height: 630 }],
   },
   robots: { index: true, follow: true },
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Signarama Vaughan",
+  name: "Custom Business Signs",
   description: "Custom signs and signage for businesses in the Greater Toronto Area",
   url: "https://custombusinesssigns.ca",
   telephone: "+19055978635",

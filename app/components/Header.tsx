@@ -29,22 +29,16 @@ export function Header({ variant = "full" }: { variant?: "full" | "landing" }) {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-white shadow-header py-2" : "bg-white py-3"
-      }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-white shadow-header py-2" : "bg-white py-3"
+        }`}
     >
       <div className="container-content flex items-center justify-between gap-4">
         {/* Logo */}
-        <Link href="/" className="flex-shrink-0 flex items-center gap-2">
-          <Image
-            src="/images/logo.webp"
-            alt="Signarama Vaughan"
-            width={180}
-            height={50}
-            className="h-10 md:h-12 w-auto"
-            priority
-          />
-          <span className="text-[#af1e2d] text-sm md:text-base font-black italic leading-tight" style={{ fontFamily: 'var(--font-logo), sans-serif' }}>Vaughan</span>
+        <Link href="/" className="flex-shrink-0 flex items-center">
+          <div className="flex flex-col">
+            <span className="text-[#af1e2d] text-lg md:text-xl font-black tracking-tight leading-none" style={{ fontFamily: 'var(--font-display), sans-serif' }}>Custom Business Signs</span>
+            <span className="text-text-secondary text-[10px] md:text-xs leading-tight mt-0.5">Serving the Greater Toronto Area</span>
+          </div>
         </Link>
 
         {variant === "full" && (
@@ -142,14 +136,11 @@ export function Header({ variant = "full" }: { variant?: "full" | "landing" }) {
         <div className="lg:hidden fixed inset-0 bg-white z-[60] flex flex-col">
           {/* Mobile menu header */}
           <div className="flex items-center justify-between px-5 py-3 border-b border-surface-light">
-            <Link href="/" onClick={() => setMenuOpen(false)}>
-              <Image
-                src="/images/logo.webp"
-                alt="Signarama Vaughan"
-                width={150}
-                height={42}
-                className="h-10 w-auto"
-              />
+            <Link href="/" onClick={() => setMenuOpen(false)} className="flex items-center">
+              <div className="flex flex-col">
+                <span className="text-[#af1e2d] text-lg font-black tracking-tight leading-none" style={{ fontFamily: 'var(--font-display), sans-serif' }}>Custom Business Signs</span>
+                <span className="text-text-secondary text-[10px] leading-tight mt-0.5">Serving the Greater Toronto Area</span>
+              </div>
             </Link>
             <button
               onClick={() => setMenuOpen(false)}
