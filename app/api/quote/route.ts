@@ -1,7 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+let _resend: Resend | null = null;
+function getResend() {
+    if (!_resend) {
+        _resend = new Resend(process.env.RESEND_API_KEY);
+    }
+    return _resend;
+}
 
 export async function POST(request: NextRequest) {
     try {
@@ -43,7 +49,7 @@ export async function POST(request: NextRequest) {
       </table>
     `;
 
-        const { error } = await resend.emails.send({
+        const { error } = await getResend().emails.send({
             from: "Signarama Vaughan <quotes@custombusinesssigns.ca>",
             to: "info@signarama-vaughan.com",
             replyTo: email,
