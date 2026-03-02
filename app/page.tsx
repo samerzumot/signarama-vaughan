@@ -17,31 +17,25 @@ export default function HomePage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative flex flex-col bg-surface-dark text-white sm:min-h-screen sm:justify-end overflow-hidden">
-        {/* Mobile: image uses aspect ratio. Desktop: image covers full background. */}
-        <div className="relative w-full aspect-[2/1] mt-[72px] sm:mt-0 sm:absolute sm:inset-0 sm:aspect-auto">
+      <section className="relative flex flex-col bg-surface-dark text-white overflow-hidden pt-[72px] lg:pt-[88px]">
+        {/* Stacked Layout across all devices */}
+        <div className="relative w-full aspect-[2/1] md:aspect-[2.5/1] lg:aspect-[3/1]">
           <Image
             src="/images/heroes/hero-quantum.jpg"
             alt="Professional installer in a bucket truck installing an illuminated channel letter sign in Toronto"
             fill
-            className="object-cover object-center"
+            className="object-cover object-[75%_center] md:object-center"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-transparent to-transparent sm:from-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-transparent to-transparent" />
         </div>
 
         {/* Bottom: tagline + CTAs */}
-        <div className="relative z-10 container-content text-center py-12 sm:pb-16 sm:pt-8 flex-1 flex flex-col justify-center">
-          <p className="text-white text-lg md:text-xl font-light mb-6 animate-fade-in [text-shadow:0_2px_8px_rgba(0,0,0,0.8)]">
+        <div className="relative z-10 container-content text-center py-12 md:py-16 flex flex-col items-center justify-center">
+          <p className="text-white text-lg md:text-xl lg:text-2xl font-light mb-6 md:mb-8 animate-fade-in [text-shadow:0_2px_8px_rgba(0,0,0,0.8)] max-w-3xl mx-auto">
             Custom design, fabrication &amp; installation for GTA businesses since 1986
           </p>
           <HeroActions />
-        </div>
-
-        <div className="hidden sm:block absolute bottom-4 left-1/2 -translate-x-1/2 z-10 animate-bounce">
-          <svg className="w-5 h-5 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
         </div>
       </section>
 
