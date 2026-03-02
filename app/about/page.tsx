@@ -3,7 +3,8 @@ import { ProcessSteps } from "../components/ProcessSteps";
 import { CTABanner } from "../components/CTABanner";
 import { SectionHeading } from "../components/SectionHeading";
 import { createMetadata } from "../lib/metadata";
-import { PHONE_NUMBER, PHONE_HREF, reportConversion } from "../lib/gtag";
+import { PHONE_NUMBER, PHONE_HREF } from "../lib/gtag";
+import { PhoneLink } from "../components/PhoneLink";
 
 export const metadata = createMetadata({
   title: "About Us | GTA Sign Company",
@@ -78,7 +79,7 @@ export default function AboutPage() {
               7250 Keele St, Unit 286<br />
               Vaughan, ON L4K 1Z8
             </address>
-            <a href={PHONE_HREF} onClick={() => reportConversion()} className="text-brand-red font-bold text-xl block mb-6">{PHONE_NUMBER}</a>
+            <PhoneLink className="text-brand-red font-bold text-xl block mb-6" />
             <a
               href="https://www.google.com/maps/dir//7250+Keele+St+unit+286+Concord,+ON+L4K+1Z8+Canada"
               target="_blank"

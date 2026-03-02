@@ -8,8 +8,9 @@ import { CTABanner } from "./components/CTABanner";
 import { SectionHeading } from "./components/SectionHeading";
 import { services } from "./lib/services";
 import { testimonials } from "./lib/testimonials";
-import { PHONE_NUMBER, PHONE_HREF, reportConversion } from "./lib/gtag";
+import { PHONE_NUMBER, PHONE_HREF } from "./lib/gtag";
 import { HeroActions } from "./components/HeroActions";
+import { PhoneLink } from "./components/PhoneLink";
 
 export default function HomePage() {
   const topServices = services;
@@ -106,9 +107,7 @@ export default function HomePage() {
               />
             </div>
             <div className="text-center">
-              <a href={PHONE_HREF} onClick={() => reportConversion()} className="text-brand-red font-bold text-xl hover:opacity-80 transition-opacity">
-                {PHONE_NUMBER}
-              </a>
+              <PhoneLink className="text-brand-red font-bold text-xl hover:opacity-80 transition-opacity" />
               <p className="text-text-muted text-sm mt-1">Mon-Fri 9AM-5PM</p>
             </div>
           </div>

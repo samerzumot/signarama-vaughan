@@ -1,6 +1,7 @@
 "use client";
 
-import { PHONE_NUMBER, PHONE_HREF, reportConversion } from "../lib/gtag";
+import { PHONE_NUMBER, PHONE_HREF } from "../lib/gtag";
+import { PhoneLink } from "./PhoneLink";
 
 export function HeroActions() {
   return (
@@ -11,9 +12,9 @@ export function HeroActions() {
       >
         Get a Free Quote
       </button>
-      <a href={PHONE_HREF} onClick={() => reportConversion()} className="btn-outline text-lg px-10 py-5">
+      <PhoneLink className="btn-outline text-lg px-10 py-5">
         Call {PHONE_NUMBER}
-      </a>
+      </PhoneLink>
     </div>
   );
 }

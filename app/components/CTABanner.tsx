@@ -1,6 +1,7 @@
 "use client";
 
-import { PHONE_NUMBER, PHONE_HREF, reportConversion } from "../lib/gtag";
+import { PHONE_NUMBER, PHONE_HREF } from "../lib/gtag";
+import { PhoneLink } from "./PhoneLink";
 
 interface CTABannerProps {
   headline: string;
@@ -27,25 +28,22 @@ export function CTABanner({
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
             onClick={() => typeof window !== "undefined" && window.dispatchEvent(new CustomEvent("open-quote-modal"))}
-            className={`inline-flex items-center justify-center px-8 py-4 font-bold rounded-button text-base transition-all duration-200 hover:-translate-y-0.5 ${
-              bgColor === "red"
+            className={`inline-flex items-center justify-center px-8 py-4 font-bold rounded-button text-base transition-all duration-200 hover:-translate-y-0.5 ${bgColor === "red"
                 ? "bg-white text-brand-red hover:bg-surface-cream"
                 : "bg-brand-red text-white hover:bg-brand-red-dark shadow-cta"
-            }`}
+              }`}
           >
             {ctaText}
           </button>
           {phone && (
-            <a
-              href={PHONE_HREF}
-              onClick={() => reportConversion()}
+            <PhoneLink
               className="inline-flex items-center gap-2 text-white font-bold text-lg hover:opacity-80 transition-opacity"
             >
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M6.62 10.79c1.44 2.82 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
               </svg>
               {PHONE_NUMBER}
-            </a>
+            </PhoneLink>
           )}
         </div>
       </div>
