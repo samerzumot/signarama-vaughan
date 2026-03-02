@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ServiceCard } from "./components/ServiceCard";
 import { TestimonialCard } from "./components/TestimonialCard";
 import { TrustStrip } from "./components/TrustStrip";
@@ -18,15 +19,13 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex flex-col justify-end text-white overflow-hidden">
         <div className="absolute inset-0 bg-surface-dark">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-full h-full object-cover"
-          >
-            <source src="/signarama-video.mp4" type="video/mp4" />
-          </video>
+          <Image
+            src="/images/heroes/hero-main.png"
+            alt="Custom illuminated channel letter sign at golden hour with Toronto skyline"
+            fill
+            className="object-cover"
+            priority
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
         </div>
 
