@@ -75,9 +75,9 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <span className="text-white/60 text-sm font-bold">Custom Business Signs</span>
+          <span className="text-white/60 text-sm font-bold">Sign Fabrication &amp; Installation Services</span>
           <p className="text-white/40 text-sm">Proudly serving the Greater Toronto Area.</p>
-          <p className="text-white/30 text-xs">&copy; {new Date().getFullYear()} Custom Business Signs. All Rights Reserved.</p>
+          <p className="text-white/30 text-xs">&copy; {new Date().getFullYear()} Sign Fabrication Services. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

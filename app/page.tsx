@@ -107,7 +107,7 @@ export default function HomePage() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Custom Business Signs location"
+                title="Sign Company location"
               />
             </div>
             <div className="text-center">

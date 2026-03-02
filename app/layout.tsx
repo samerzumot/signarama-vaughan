@@ -34,16 +34,16 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Custom Business Signs | GTA Sign Company",
-    template: "%s | Custom Business Signs",
+    default: "Custom Sign Fabrication & Installation | GTA Sign Company",
+    template: "%s | Sign Fabrication & Installation",
   },
   description:
-    "Custom Business Signs designs, fabricates, and installs custom signs for businesses across the GTA. Channel letters, storefront signs, vehicle wraps & more. Call (905) 597-8635.",
+    "We design, fabricate, and install custom signs for businesses across the GTA. Channel letters, storefront signs, vehicle wraps & more. Call (905) 597-8635.",
   metadataBase: new URL("https://custombusinesssigns.ca"),
   openGraph: {
     type: "website",
     locale: "en_CA",
-    siteName: "Custom Business Signs",
+    siteName: "Custom Sign Fabrication",
     images: [{ url: "/images/og-image.jpg", width: 1200, height: 630 }],
   },
   robots: { index: true, follow: true },
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Custom Business Signs",
+  name: "Sign Fabrication & Installation Contractors",
   description: "Custom signs and signage for businesses in the Greater Toronto Area",
   url: "https://custombusinesssigns.ca",
   telephone: "+19055978635",

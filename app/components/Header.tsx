@@ -34,10 +34,15 @@ export function Header({ variant = "full" }: { variant?: "full" | "landing" }) {
     >
       <div className="container-content flex items-center justify-between gap-4">
         {/* Logo */}
-        <Link href="/" className="flex-shrink-0 flex items-center">
+        <Link href="/" className="flex-shrink-0 flex items-center gap-3">
+          <div className="w-10 h-10 bg-brand-red rounded-lg flex items-center justify-center shadow-sm">
+            <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={2} d="M3 12h18M5 12V6a2 2 0 012-2h10a2 2 0 012 2v6M9 21v-3M15 21v-3" />
+            </svg>
+          </div>
           <div className="flex flex-col">
-            <span className="text-[#af1e2d] text-lg md:text-xl font-black tracking-tight leading-none" style={{ fontFamily: 'var(--font-display), sans-serif' }}>Custom Business Signs</span>
-            <span className="text-text-secondary text-[10px] md:text-xs leading-tight mt-0.5">Serving the Greater Toronto Area</span>
+            <span className="text-text-primary text-base md:text-lg font-bold tracking-tight leading-none" style={{ fontFamily: 'var(--font-display), sans-serif' }}>Sign Fabrication</span>
+            <span className="text-text-secondary text-[10px] md:text-xs leading-tight mt-0.5">&amp; Installation Services</span>
           </div>
         </Link>
 
@@ -136,10 +141,15 @@ export function Header({ variant = "full" }: { variant?: "full" | "landing" }) {
         <div className="lg:hidden fixed inset-0 bg-white z-[60] flex flex-col">
           {/* Mobile menu header */}
           <div className="flex items-center justify-between px-5 py-3 border-b border-surface-light">
-            <Link href="/" onClick={() => setMenuOpen(false)} className="flex items-center">
+            <Link href="/" onClick={() => setMenuOpen(false)} className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-brand-red rounded-lg flex items-center justify-center shadow-sm">
+                <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={2} d="M3 12h18M5 12V6a2 2 0 012-2h10a2 2 0 012 2v6M9 21v-3M15 21v-3" />
+                </svg>
+              </div>
               <div className="flex flex-col">
-                <span className="text-[#af1e2d] text-lg font-black tracking-tight leading-none" style={{ fontFamily: 'var(--font-display), sans-serif' }}>Custom Business Signs</span>
-                <span className="text-text-secondary text-[10px] leading-tight mt-0.5">Serving the Greater Toronto Area</span>
+                <span className="text-text-primary text-base font-bold tracking-tight leading-none" style={{ fontFamily: 'var(--font-display), sans-serif' }}>Sign Fabrication</span>
+                <span className="text-text-secondary text-[10px] leading-tight mt-0.5">&amp; Installation Services</span>
               </div>
             </Link>
             <button

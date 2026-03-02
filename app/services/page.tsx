@@ -7,7 +7,7 @@ import { createMetadata } from "../lib/metadata";
 
 export const metadata = createMetadata({
   title: "Custom Sign Services | Channel Letters, Vehicle Wraps & More",
-  description: "Browse all custom sign services from Custom Business Signs. Channel letters, storefront signs, vehicle wraps, illuminated signs, pylon signs, and more in the GTA.",
+  description: "Browse all our custom sign services. Channel letters, storefront signs, vehicle wraps, illuminated signs, pylon signs, and more in the GTA.",
   path: "/services",
 });
 

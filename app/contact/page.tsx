@@ -3,8 +3,8 @@ import { createMetadata } from "../lib/metadata";
 import { PHONE_NUMBER, PHONE_HREF } from "../lib/gtag";
 
 export const metadata = createMetadata({
-  title: "Contact Custom Business Signs | Get a Free Sign Quote",
-  description: "Contact Custom Business Signs for a free custom sign quote. Call (905) 597-8635 or visit our showroom at 7250 Keele St, Vaughan.",
+  title: "Contact Us | Get a Free Sign Quote",
+  description: "Contact us for a free custom sign quote. Call (905) 597-8635 or visit our showroom at 7250 Keele St, Vaughan.",
   path: "/contact",
 });
 
@@ -73,7 +73,7 @@ export default function ContactPage() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Custom Business Signs location"
+                  title="Sign Company location"
                 />
               </div>
             </div>
