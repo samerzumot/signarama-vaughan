@@ -17,7 +17,7 @@ export default function HomePage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative flex flex-col bg-surface-dark text-white overflow-hidden pt-[72px] lg:pt-[88px]">
+      <section className="relative flex flex-col bg-white text-text-primary overflow-hidden pt-[72px] lg:pt-[88px]">
         {/* Stacked Layout across all devices */}
         <div className="relative w-full aspect-[2/1] md:aspect-[2.5/1] lg:aspect-[3/1]">
           <Image
@@ -27,12 +27,12 @@ export default function HomePage() {
             className="object-cover object-[75%_center] md:object-center"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
         </div>
 
         {/* Bottom: tagline + CTAs */}
         <div className="relative z-10 container-content text-center py-12 md:py-16 flex flex-col items-center justify-center">
-          <p className="text-white text-lg md:text-xl lg:text-2xl font-light mb-6 md:mb-8 animate-fade-in [text-shadow:0_2px_8px_rgba(0,0,0,0.8)] max-w-3xl mx-auto">
+          <p className="text-text-primary text-lg md:text-xl lg:text-2xl font-semibold mb-6 md:mb-8 animate-fade-in max-w-3xl mx-auto">
             Custom design, fabrication &amp; installation for GTA businesses since 1986
           </p>
           <HeroActions />
