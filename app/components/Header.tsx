@@ -33,11 +33,11 @@ export function Header({ variant = "full" }: { variant?: "full" | "landing" }) {
         }`}
     >
       <div className="container-content flex items-center justify-between gap-4">
-        {/* Logo */}
+        {/* Logo Replacement - Descriptive Text */}
         <Link href="/" className="flex-shrink-0 flex items-center">
           <div className="flex flex-col">
-            <span className="text-text-primary text-xl md:text-2xl font-black tracking-tight leading-none" style={{ fontFamily: 'var(--font-display), sans-serif' }}>Custom Sign Fabrication</span>
-            <span className="text-text-secondary font-medium text-[10px] md:text-xs leading-tight mt-0.5 uppercase tracking-wide">Serving the GTA Since 1986</span>
+            <span className="text-text-primary text-lg md:text-xl font-black tracking-tight leading-none uppercase" style={{ fontFamily: 'var(--font-display), sans-serif' }}>We Build &amp; Install</span>
+            <span className="text-brand-red font-bold text-sm md:text-base leading-tight mt-0.5">Custom Signs Across the GTA</span>
           </div>
         </Link>
 
@@ -138,8 +138,8 @@ export function Header({ variant = "full" }: { variant?: "full" | "landing" }) {
           <div className="flex items-center justify-between px-5 py-3 border-b border-surface-light">
             <Link href="/" onClick={() => setMenuOpen(false)} className="flex items-center">
               <div className="flex flex-col">
-                <span className="text-text-primary text-lg font-black tracking-tight leading-none" style={{ fontFamily: 'var(--font-display), sans-serif' }}>Custom Sign Fabrication</span>
-                <span className="text-text-secondary font-medium text-[9px] leading-tight mt-0.5 uppercase tracking-wide">Serving the GTA Since 1986</span>
+                <span className="text-text-primary text-base font-black tracking-tight leading-none uppercase" style={{ fontFamily: 'var(--font-display), sans-serif' }}>We Build &amp; Install</span>
+                <span className="text-brand-red font-bold text-xs leading-tight mt-0.5">Custom Signs in the GTA</span>
               </div>
             </Link>
             <button
