@@ -23,7 +23,7 @@ export default function HomePage() {
             src="/images/heroes/hero-quantum.jpg"
             alt="Professional installer in a bucket truck installing an illuminated channel letter sign in Toronto"
             fill
-            className="object-cover object-[75%_center] md:object-center"
+            className="mt-16 sm:mt-0 object-contain object-top sm:object-cover sm:object-center"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
