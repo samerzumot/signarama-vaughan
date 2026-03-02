@@ -32,7 +32,7 @@ export default function HomePage() {
         {/* Bottom: tagline + CTAs */}
         <div className="relative z-10 container-content text-center pb-16 pt-8">
           <p className="text-white text-lg md:text-xl font-light mb-6 animate-fade-in [text-shadow:0_2px_8px_rgba(0,0,0,0.8)]">
-            Custom design, fabrication &amp; installation for businesses across the GTA
+            Custom design, fabrication &amp; installation for GTA businesses since 1986
           </p>
           <HeroActions />
         </div>
