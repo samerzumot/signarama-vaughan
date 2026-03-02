@@ -94,7 +94,7 @@ export default function RootLayout({
         <MobileCTABar />
         <QuoteModal />
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-17956192139"
+          src="https://www.googletagmanager.com/gtag/js?id=GT-5R8M6V4M"
           strategy="lazyOnload"
         />
         <Script id="gtag-init" strategy="lazyOnload">
@@ -102,8 +102,9 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'AW-17956192139');
-            gtag('config', 'AW-17956192139/8e71CI6OuvkbEIv_lvJC', {
+            gtag('config', 'GT-5R8M6V4M');
+            gtag('config', 'G-CKKMY10C0W');
+            gtag('config', 'AW-17985903692/enCMCNuYr4EcEMy4rIBD', {
               'phone_conversion_number': '905-597-8635'
             });
           `}
