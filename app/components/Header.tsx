@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { PHONE_NUMBER, PHONE_HREF } from "../lib/gtag";
+import { PHONE_NUMBER, PHONE_HREF, reportConversion } from "../lib/gtag";
 import { services } from "../lib/services";
 
 export function Header({ variant = "full" }: { variant?: "full" | "landing" }) {
@@ -79,7 +79,7 @@ export function Header({ variant = "full" }: { variant?: "full" | "landing" }) {
 
             {/* Desktop Right — phone + quote */}
             <div className="hidden lg:flex items-center gap-5">
-              <a href={PHONE_HREF} className="flex items-center gap-2 text-brand-red font-bold text-lg hover:opacity-80 transition-opacity">
+              <a href={PHONE_HREF} onClick={() => reportConversion()} className="flex items-center gap-2 text-brand-red font-bold text-lg hover:opacity-80 transition-opacity">
                 <PhoneIcon />
                 {PHONE_NUMBER}
               </a>
@@ -96,7 +96,7 @@ export function Header({ variant = "full" }: { variant?: "full" | "landing" }) {
         {/* Landing variant: phone on desktop */}
         {variant === "landing" && (
           <div className="hidden lg:flex items-center gap-5">
-            <a href={PHONE_HREF} className="flex items-center gap-2 text-brand-red font-bold text-xl hover:opacity-80 transition-opacity">
+            <a href={PHONE_HREF} onClick={() => reportConversion()} className="flex items-center gap-2 text-brand-red font-bold text-xl hover:opacity-80 transition-opacity">
               <PhoneIcon />
               {PHONE_NUMBER}
             </a>
@@ -114,7 +114,7 @@ export function Header({ variant = "full" }: { variant?: "full" | "landing" }) {
 
         {/* Mobile right side */}
         <div className="flex lg:hidden items-center gap-2">
-          <a href={PHONE_HREF} className="text-brand-red p-2" aria-label="Call us">
+          <a href={PHONE_HREF} onClick={() => reportConversion()} className="text-brand-red p-2" aria-label="Call us">
             <PhoneIcon />
           </a>
           {variant === "full" && (
@@ -192,6 +192,7 @@ export function Header({ variant = "full" }: { variant?: "full" | "landing" }) {
           <div className="px-5 py-4 border-t border-surface-light space-y-3">
             <a
               href={PHONE_HREF}
+              onClick={() => reportConversion()}
               className="flex items-center justify-center gap-2 text-brand-red font-bold text-xl py-3"
             >
               <PhoneIcon />

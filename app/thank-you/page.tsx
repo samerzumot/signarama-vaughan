@@ -29,7 +29,7 @@ export default function ThankYouPage() {
                         </p>
                         <p className="text-text-muted mb-8">
                             Need it sooner? Call us directly at{" "}
-                            <a href={PHONE_HREF} className="text-brand-red font-semibold hover:underline">
+                            <a href={PHONE_HREF} onClick={() => reportConversion()} className="text-brand-red font-semibold hover:underline">
                                 {PHONE_NUMBER}
                             </a>
                         </p>

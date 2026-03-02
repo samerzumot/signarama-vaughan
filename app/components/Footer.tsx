@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PHONE_NUMBER, PHONE_HREF } from "../lib/gtag";
+import { PHONE_NUMBER, PHONE_HREF, reportConversion } from "../lib/gtag";
 
 const serviceLinks = [
   { label: "Channel Letters", href: "/services/channel-letters" },
@@ -59,7 +59,7 @@ export function Footer() {
           <div>
             <h3 className="font-display text-lg mb-4 text-white">Contact</h3>
             <div className="space-y-3 text-sm">
-              <a href={PHONE_HREF} className="flex items-center gap-2 text-white font-bold text-lg hover:text-brand-red transition-colors">
+              <a href={PHONE_HREF} onClick={() => reportConversion()} className="flex items-center gap-2 text-white font-bold text-lg hover:text-brand-red transition-colors">
                 {PHONE_NUMBER}
               </a>
               <Link href="/contact" className="text-white/60 hover:text-white transition-colors block">

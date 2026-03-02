@@ -1,6 +1,6 @@
 import { QuoteForm } from "../components/QuoteForm";
 import { createMetadata } from "../lib/metadata";
-import { PHONE_NUMBER, PHONE_HREF } from "../lib/gtag";
+import { PHONE_NUMBER, PHONE_HREF, reportConversion } from "../lib/gtag";
 
 export const metadata = createMetadata({
   title: "Contact Us | Get a Free Sign Quote",
@@ -30,7 +30,7 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-display text-xl mb-4">Contact Details</h3>
                 <div className="space-y-4">
-                  <a href={PHONE_HREF} className="flex items-center gap-3 text-brand-red font-bold text-xl hover:opacity-80 transition-opacity">
+                  <a href={PHONE_HREF} onClick={() => reportConversion()} className="flex items-center gap-3 text-brand-red font-bold text-xl hover:opacity-80 transition-opacity">
                     <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M6.62 10.79c1.44 2.82 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
                     </svg>

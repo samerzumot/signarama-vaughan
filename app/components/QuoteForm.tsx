@@ -3,7 +3,6 @@
 import { useState, useRef, FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import { services } from "../lib/services";
-import { reportFormLeadConversion } from "../lib/gtag";
 
 interface QuoteFormProps {
   variant?: "inline" | "modal";
@@ -44,12 +43,8 @@ export function QuoteForm({
       if (onSubmitSuccess) {
         onSubmitSuccess();
       }
-      // Fire the Google Ads form-lead conversion first.
-      // The redirect runs inside the event_callback so gtag can
-      // send the conversion beacon before the page navigates away.
-      reportFormLeadConversion(() => {
-        router.push("/thank-you");
-      });
+      // Form tracking is handled via GA4 form submit action automatically.
+      router.push("/thank-you");
     }
   }
 
