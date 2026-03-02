@@ -20,8 +20,8 @@ export default function HomePage() {
       <section className="relative min-h-screen flex flex-col justify-end text-white overflow-hidden">
         <div className="absolute inset-0 bg-surface-dark">
           <Image
-            src="/images/heroes/hero-main.png"
-            alt="Custom illuminated channel letter sign at golden hour with Toronto skyline"
+            src="/images/heroes/hero-quantum.jpg"
+            alt="Professional installer in a bucket truck installing an illuminated channel letter sign in Toronto"
             fill
             className="object-cover"
             priority
