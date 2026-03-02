@@ -2,7 +2,7 @@ export function TrustStrip() {
   return (
     <section className="bg-surface-cream py-12 border-y border-surface-light">
       <div className="container-content">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+        <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-8 md:gap-16 lg:gap-24">
           <TrustItem
             icon={<CanadaIcon />}
             title="Locally Sourced Materials"
