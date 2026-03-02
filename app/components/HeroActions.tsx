@@ -11,7 +11,7 @@ export function HeroActions() {
       >
         Get a Free Quote
       </button>
-      <a href={PHONE_HREF} onClick={() => reportConversion()} className="btn-secondary text-lg px-10 py-5">
+      <a href={PHONE_HREF} onClick={() => reportConversion()} className="btn-outline text-lg px-10 py-5">
         Call {PHONE_NUMBER}
       </a>
     </div>
