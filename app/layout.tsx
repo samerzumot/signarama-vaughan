@@ -104,7 +104,7 @@ export default function RootLayout({
             gtag('js', new Date());
             gtag('config', 'GT-5R8M6V4M');
             gtag('config', 'G-CKKMY10C0W');
-            gtag('config', 'AW-17985903692/enCMCNuYr4EcEMy4rIBD', {
+            gtag('config', 'AW-17985903692/em0eCLCar4EcEMy4rIBD', {
               'phone_conversion_number': '905-597-8635'
             });
           `}
