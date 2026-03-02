@@ -50,7 +50,7 @@ export const services: Service[] = [
     title: "Storefront Signs",
     shortDescription: "Complete storefront solutions including fascias, window lettering, and illuminated signs.",
     longDescription: "Your storefront is your first impression. A well-designed storefront sign package combines multiple sign types — illuminated channel letters or light boxes, window graphics, blade signs, and awnings — into a cohesive brand presence that attracts foot traffic and builds recognition. We work with business owners, landlords, and property managers across the GTA to design and install complete storefront signage packages.",
-    image: "/images/services/storefront-signs.jpg",
+    image: "/images/gallery/storefront-signs/storefront-homecare.jpg",
     heroImage: "/images/heroes/storefront-golden-hour.jpg",
     features: ["Illuminated fascia signs", "Channel letter packages", "Window vinyl and graphics", "Projecting blade signs", "Under-awning signs", "Complete brand packages"],
     faq: [
@@ -59,7 +59,6 @@ export const services: Service[] = [
       { question: "Do you work with landlords on sign approvals?", answer: "Yes, we regularly coordinate with property managers and landlords on sign criteria, placement, and approvals as part of our project management service." },
     ],
     gallery: [
-      { src: "/images/gallery/storefront-signs/storefront-main.png", alt: "Complete storefront signage package" },
       { src: "/images/gallery/storefront-signs/storefront-1.png", alt: "Storefront sign installation" },
       { src: "/images/gallery/storefront-signs/storefront-3.png", alt: "Illuminated storefront fascia" },
       { src: "/images/gallery/storefront-signs/storefront-4.png", alt: "Custom storefront branding" },
