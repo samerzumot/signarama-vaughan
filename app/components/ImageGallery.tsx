@@ -30,11 +30,10 @@ export function ImageGallery({ images, serviceName }: { images: GalleryImage[]; 
             <button
               key={i}
               onClick={() => setSelected(i)}
-              className={`relative flex-shrink-0 w-20 h-16 rounded-md overflow-hidden transition-all ${
-                i === selected
+              className={`relative flex-shrink-0 w-20 h-16 rounded-md overflow-hidden transition-all ${i === selected
                   ? "ring-2 ring-brand-red opacity-100 scale-105"
                   : "opacity-60 hover:opacity-100"
-              }`}
+                }`}
             >
               <Image
                 src={img.src}
@@ -48,9 +47,6 @@ export function ImageGallery({ images, serviceName }: { images: GalleryImage[]; 
         </div>
       )}
 
-      <p className="text-text-muted text-xs mt-2 text-center">
-        {images.length} {serviceName.toLowerCase()} projects completed
-      </p>
     </div>
   );
 }
