@@ -1,5 +1,6 @@
 import { LandingPage } from "../components/LandingPage";
 import { createMetadata } from "../lib/metadata";
+import { services } from "../lib/services";
 
 export const metadata = createMetadata({
   title: "Custom Signs in Vaughan & the GTA",
@@ -9,12 +10,22 @@ export const metadata = createMetadata({
 });
 
 export default function CustomSignsLanding() {
+  const mixedGallery = [
+    services.find((s) => s.slug === "channel-letters")?.gallery?.[0],
+    services.find((s) => s.slug === "storefront-signs")?.gallery?.[0],
+    services.find((s) => s.slug === "vehicle-wraps")?.gallery?.[0],
+    services.find((s) => s.slug === "pylon-signs")?.gallery?.[0],
+    services.find((s) => s.slug === "indoor-signs")?.gallery?.[0],
+    services.find((s) => s.slug === "illuminated-signs")?.gallery?.[0],
+  ].filter(Boolean) as { src: string; alt: string }[];
+
   return (
     <LandingPage
       title="Custom Signs in Vaughan & the GTA"
       subtitle="Canada's most trusted signage partner — full-service design, fabrication & installation for businesses of every size."
       heroImage="/images/heroes/channel-letters-night.jpg"
       serviceName="Custom Signs"
+      galleryImages={mixedGallery}
       benefits={[
         { title: "Every Sign Type", description: "Channel letters, storefront signs, vehicle wraps, pylon signs, indoor signs, and more." },
         { title: "Enterprise Trusted", description: "Proven by Uber, Telus, York University, and businesses across the GTA." },
