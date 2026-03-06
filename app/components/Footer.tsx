@@ -76,7 +76,13 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <span className="text-white/60 text-sm font-bold">Sign Fabrication &amp; Installation Services</span>
           <p className="text-white/40 text-sm">Proudly serving the Greater Toronto Area.</p>
-          <p className="text-white/30 text-xs">&copy; {new Date().getFullYear()} Sign Fabrication Services. All Rights Reserved.</p>
+          <div className="flex flex-col md:flex-row items-center gap-4 text-white/30 text-xs">
+            <p>&copy; {new Date().getFullYear()} Sign Fabrication Services. All Rights Reserved.</p>
+            <div className="flex gap-4 border-t md:border-t-0 md:border-l border-white/10 pt-2 md:pt-0 md:pl-4">
+              <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+              <Link href="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
