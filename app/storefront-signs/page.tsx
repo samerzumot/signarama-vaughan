@@ -6,6 +6,7 @@ export const metadata = createMetadata({
   title: "Storefront Signs & Building Signage in Vaughan",
   description: "Complete storefront signage solutions in Vaughan & the GTA. Channel letters, light boxes, window graphics & more. Free quote: (905) 597-8635.",
   path: "/storefront-signs",
+  canonical: "https://www.custombusinesssigns.ca/services/storefront-signs",
 });
 
 const service = getServiceBySlug("storefront-signs");

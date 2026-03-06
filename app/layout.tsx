@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   description:
     "We design, fabricate, and install custom signs for businesses across the GTA. Channel letters, storefront signs, vehicle wraps & more. Call (905) 597-8635.",
-  metadataBase: new URL("https://custombusinesssigns.ca"),
+  metadataBase: new URL("https://www.custombusinesssigns.ca"),
   openGraph: {
     type: "website",
     locale: "en_CA",
@@ -54,7 +54,7 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   name: "Sign Fabrication & Installation Contractors",
   description: "Custom signs and signage for businesses in the Greater Toronto Area",
-  url: "https://custombusinesssigns.ca",
+  url: "https://www.custombusinesssigns.ca",
   telephone: "+19055978635",
   email: "info@signarama-vaughan.com",
   address: {

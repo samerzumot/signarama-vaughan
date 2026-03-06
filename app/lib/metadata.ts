@@ -6,12 +6,14 @@ export function createMetadata({
   path = "",
   image,
   noIndex = false,
+  canonical,
 }: {
   title: string;
   description: string;
   path?: string;
   image?: string;
   noIndex?: boolean;
+  canonical?: string;
 }): Metadata {
   return {
     title,
@@ -19,8 +21,11 @@ export function createMetadata({
     openGraph: {
       title,
       description,
-      url: `https://custombusinesssigns.ca${path}`,
+      url: `https://www.custombusinesssigns.ca${path}`,
       images: image ? [{ url: image }] : undefined,
+    },
+    alternates: {
+      canonical: canonical || `https://www.custombusinesssigns.ca${path}`,
     },
     robots: noIndex ? { index: false, follow: false } : undefined,
   };

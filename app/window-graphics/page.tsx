@@ -6,6 +6,7 @@ export const metadata = createMetadata({
   title: "Custom Window Graphics & Vinyl",
   description: "Custom window graphics, vinyl lettering & frosted film. Privacy & promotional solutions. Free quote: (905) 597-8635.",
   path: "/window-graphics",
+  canonical: "https://www.custombusinesssigns.ca/services/window-graphics",
 });
 
 const service = getServiceBySlug("window-graphics");
