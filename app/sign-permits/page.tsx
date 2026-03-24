@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { CTABanner } from "../components/CTABanner";
 import { SectionHeading } from "../components/SectionHeading";
+import { PermitGuideForm } from "../components/PermitGuideForm";
 import { createMetadata } from "../lib/metadata";
 import { permits } from "../lib/permits";
 
@@ -56,20 +57,7 @@ export default function SignPermitsHubPage() {
             <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
               Skip the municipal headache. Get our internal Excel calculator to estimate your exact permit fees, plus our master checklist for avoiding 90% of permit denials.
             </p>
-            <form className="flex flex-col sm:flex-row gap-4 justify-center max-w-xl mx-auto">
-              <input 
-                type="email" 
-                placeholder="Enter your business email" 
-                className="px-6 py-4 rounded-button text-text-primary flex-1 focus:outline-none focus:ring-2 focus:ring-brand-red"
-                required
-              />
-              <button 
-                type="submit" 
-                className="bg-brand-red text-white font-bold py-4 px-8 rounded-button hover:bg-brand-red-light transition-colors shadow-cta whitespace-nowrap"
-              >
-                Send Me the PDF
-              </button>
-            </form>
+            <PermitGuideForm />
             <p className="text-sm text-white/50 mt-4">100% free resource. We never spam.</p>
           </div>
         </div>
