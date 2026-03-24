@@ -7,7 +7,7 @@ export function ServiceHeroActions({ serviceName }: { serviceName: string }) {
   return (
     <div className="flex flex-row items-start gap-3">
       <button
-        onClick={() => window.dispatchEvent(new CustomEvent("open-quote-modal"))}
+        onClick={() => window.dispatchEvent(new CustomEvent("open-quote-modal", { detail: { signType: serviceName } }))}
         className="btn-primary flex-1 sm:flex-none"
       >
         Get a Free Quote

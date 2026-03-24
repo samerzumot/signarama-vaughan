@@ -5,9 +5,14 @@ import { QuoteForm } from "./QuoteForm";
 
 export function QuoteModal() {
   const [open, setOpen] = useState(false);
+  const [signType, setSignType] = useState("");
 
   useEffect(() => {
-    const handler = () => setOpen(true);
+    const handler = (e: Event) => {
+      const detail = (e as CustomEvent).detail;
+      if (detail?.signType) setSignType(detail.signType);
+      setOpen(true);
+    };
     window.addEventListener("open-quote-modal", handler);
     return () => window.removeEventListener("open-quote-modal", handler);
   }, []);
@@ -38,7 +43,7 @@ export function QuoteModal() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
-        <QuoteForm variant="modal" heading="Request a Quote" onSubmitSuccess={() => setOpen(false)} />
+        <QuoteForm variant="modal" heading="Request a Quote" preselectedService={signType} onSubmitSuccess={() => setOpen(false)} />
       </div>
     </div>
   );
