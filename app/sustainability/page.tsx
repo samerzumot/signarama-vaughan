@@ -96,42 +96,42 @@ export default function SustainabilityPage() {
                 <div className="bg-surface-cream p-6 rounded-card border border-surface-light shadow-sm">
                   <h4 className="font-display text-xl text-text-primary mb-3">Vaughan</h4>
                   <ul className="space-y-2 text-sm">
-                    <li><a href="https://www.vaughan.ca/business/building-and-renovating/sign-permits" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">City of Vaughan Sign Permits</a></li>
+                    <li><a href="https://www.vaughan.ca/business/building-and-renovating" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">City of Vaughan Sign Permits</a></li>
                     <li><a href="https://vaughanchamber.ca/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-brand-red transition-colors">Vaughan Chamber of Commerce</a></li>
                   </ul>
                 </div>
                 <div className="bg-surface-cream p-6 rounded-card border border-surface-light shadow-sm">
                   <h4 className="font-display text-xl text-text-primary mb-3">Toronto</h4>
                   <ul className="space-y-2 text-sm">
-                    <li><a href="https://www.toronto.ca/services-payments/building-construction/apply-for-a-building-permit/building-permit-application-guides/sign-permits/" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">City of Toronto Sign Permits</a></li>
+                    <li><a href="https://www.toronto.ca/services-payments/building-construction/sign-permits-information/" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">City of Toronto Sign Permits</a></li>
                     <li><a href="https://bot.com/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-brand-red transition-colors">Toronto Region Board of Trade</a></li>
                   </ul>
                 </div>
                 <div className="bg-surface-cream p-6 rounded-card border border-surface-light shadow-sm">
                   <h4 className="font-display text-xl text-text-primary mb-3">Mississauga</h4>
                   <ul className="space-y-2 text-sm">
-                    <li><a href="https://www.mississauga.ca/services-and-programs/building-and-renovating/signs/" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">Mississauga Sign Permits</a></li>
+                    <li><a href="https://www.mississauga.ca/services-and-programs/building-and-renovating/sign-permits/" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">Mississauga Sign Permits</a></li>
                     <li><a href="https://www.mississaugaboardoftrade.com/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-brand-red transition-colors">Mississauga Board of Trade</a></li>
                   </ul>
                 </div>
                 <div className="bg-surface-cream p-6 rounded-card border border-surface-light shadow-sm">
                   <h4 className="font-display text-xl text-text-primary mb-3">Brampton</h4>
                   <ul className="space-y-2 text-sm">
-                    <li><a href="https://www.brampton.ca/EN/Business/building-permits/Pages/Sign-Permits.aspx" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">Brampton Sign Permits</a></li>
+                    <li><a href="https://www.brampton.ca/EN/Business/building-permits/Pages/Welcome.aspx" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">Brampton Sign Permits</a></li>
                     <li><a href="https://bramptonbot.com/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-brand-red transition-colors">Brampton Board of Trade</a></li>
                   </ul>
                 </div>
                 <div className="bg-surface-cream p-6 rounded-card border border-surface-light shadow-sm">
                   <h4 className="font-display text-xl text-text-primary mb-3">Markham</h4>
                   <ul className="space-y-2 text-sm">
-                    <li><a href="https://www.markham.ca/wps/portal/home/business/building-permits/sign-permits" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">Markham Sign Permits</a></li>
+                    <li><a href="https://www.markham.ca/wps/portal/home/business/building-permits/" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">Markham Sign Permits</a></li>
                     <li><a href="https://markham-chamber.ca/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-brand-red transition-colors">Markham Board of Trade</a></li>
                   </ul>
                 </div>
                 <div className="bg-surface-cream p-6 rounded-card border border-surface-light shadow-sm">
                   <h4 className="font-display text-xl text-text-primary mb-3">Richmond Hill</h4>
                   <ul className="space-y-2 text-sm">
-                    <li><a href="https://www.richmondhill.ca/en/business/Sign-Permits.aspx" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">Richmond Hill Sign Permits</a></li>
+                    <li><a href="https://www.richmondhill.ca/en/business/building-and-zoning.aspx" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">Richmond Hill Sign Permits</a></li>
                     <li><a href="https://rhbot.ca/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-brand-red transition-colors">Richmond Hill Board of Trade</a></li>
                   </ul>
                 </div>
