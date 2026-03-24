@@ -37,7 +37,7 @@ export default function HomePage() {
             Custom Sign Fabrication &amp; Installation in the GTA
           </h1>
           <p className="text-text-primary text-lg md:text-xl font-semibold mb-6 md:mb-8 animate-fade-in max-w-3xl mx-auto">
-            Custom design, fabrication &amp; installation for GTA businesses since 1986
+            Expertly crafted signage solutions for businesses of all sizes since 1986
           </p>
           <HeroActions />
         </div>
