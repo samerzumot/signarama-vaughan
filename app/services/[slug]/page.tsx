@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { services, getServiceBySlug } from "../../lib/services";
-import { testimonials } from "../../lib/testimonials";
+import { getTestimonialsForService } from "../../lib/testimonials";
 import { TestimonialCard } from "../../components/TestimonialCard";
 import { ClientLogos } from "../../components/ClientLogos";
 import { FAQAccordion } from "../../components/FAQAccordion";
@@ -114,7 +114,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <div className="container-content">
           <SectionHeading title="What Our Clients Say" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-narrow mx-auto">
-            {testimonials.slice(0, 2).map((t, i) => (
+            {getTestimonialsForService(slug, 2).map((t, i) => (
               <TestimonialCard key={i} {...t} />
             ))}
           </div>
