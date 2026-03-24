@@ -69,7 +69,7 @@ export default function AboutPage() {
               in-house capabilities mean we control quality at every single stage. We utilize advanced CNC routing, large-format digital printing, and precision metal fabrication to create signs that don&apos;t just look spectacular on day one, but endure the harsh Canadian weather for years to come.
             </p>
             <p>
-              We are obsessed with quality materials. That is why we exclusively partner with industry leaders like 3M, Avery Dennison, and Grimco. When you invest in a storefront sign, illuminated channel letters, or a commercial vehicle wrap, you can rest assured it is built with premium cast vinyls, architectural-grade aluminum, and high-efficiency LED lighting systems designed for a 50,000+ hour lifespan. 
+              We are obsessed with quality materials. That is why we exclusively partner with industry leaders like <a href="https://www.3mcanada.ca/" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">3M</a>, <a href="https://graphics.averydennison.com/" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">Avery Dennison</a>, and <a href="https://www.grimco.ca/" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">Grimco</a>. When you invest in a storefront sign, illuminated channel letters, or a commercial vehicle wrap, you can rest assured it is built with premium cast vinyls, architectural-grade aluminum, and high-efficiency LED lighting systems designed for a 50,000+ hour lifespan. 
             </p>
             <p>
               Beyond manufacturing, we pride ourselves on making the complex process entirely seamless for our clients. Signage involves strict municipal compliance, landlord approvals, and structural engineering. Our dedicated project managers actively navigate the specific sign permit by-laws across Vaughan, Toronto, Mississauga, Brampton, and Markham, ensuring your project is fully legal and compliant before manufacturing even begins. As proud members of the <a href="https://signs.org" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">International Sign Association (ISA)</a>, we ensure our work adheres to the highest industry standards for manufacturing and safety.
@@ -117,7 +117,7 @@ export default function AboutPage() {
                   Premium Materials
                 </h3>
                 <p className="text-text-secondary text-sm leading-relaxed pl-13">
-                  We manufacture with industry-leading materials like 3M and Avery Dennison vinyls, architectural aluminum, and high-grade acrylics to guarantee maximum longevity and vibrant brand colors.
+                  We manufacture with industry-leading materials like <a href="https://www.3mcanada.ca/" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">3M</a> and <a href="https://graphics.averydennison.com/" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">Avery Dennison</a> vinyls, architectural aluminum, and high-grade acrylics to guarantee maximum longevity and vibrant brand colors.
                 </p>
               </div>
 

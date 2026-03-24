@@ -3,11 +3,13 @@ export interface GalleryImage {
   alt: string;
 }
 
+import type { ReactNode } from "react";
+
 export interface Service {
   slug: string;
   title: string;
   shortDescription: string;
-  longDescription: string;
+  longDescription: ReactNode;
   image: string;
   heroImage: string;
   features: string[];
@@ -20,7 +22,7 @@ export const services: Service[] = [
     slug: "channel-letters",
     title: "Channel Letters",
     shortDescription: "Vibrant, individual LED-illuminated letters that offer maximum visibility night and day.",
-    longDescription: "Channel letters are three-dimensional, individually fabricated letters commonly used for building signage. Each letter contains LED modules that illuminate the face, creating a bold, professional look that draws attention 24/7. They are the go-to choice for retail stores, restaurants, corporate offices, and franchises looking for high-impact exterior signage. We fabricate custom business signs in-house using premium architectural aluminum and UV-resistant acrylic. According to the Sign Research Foundation, energy-efficient LEDs like the ones we use are rated for 50,000+ hours of operation. Our dedicated permit specialists actively manage the entire municipal approval process across Vaughan, Toronto, and the broader GTA, ensuring your illuminated channel letters meet all local by-laws and structural engineering requirements before we even begin our precision CNC manufacturing process.",
+    longDescription: <>Channel letters are three-dimensional, individually fabricated letters commonly used for building signage. Each letter contains LED modules that illuminate the face, creating a bold, professional look that draws attention 24/7. They are the go-to choice for retail stores, restaurants, corporate offices, and franchises looking for high-impact exterior signage. We fabricate custom business signs in-house using premium architectural aluminum and UV-resistant acrylic. According to the <a href="https://signresearch.org/" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">Sign Research Foundation</a>, energy-efficient LEDs like the ones we use are rated for 50,000+ hours of operation. Our dedicated permit specialists actively manage the entire municipal approval process across Vaughan, Toronto, and the broader GTA, ensuring your illuminated channel letters meet all local by-laws and structural engineering requirements before we even begin our precision CNC manufacturing process.</>,
     image: "/images/services/channel-letters.jpg",
     heroImage: "/images/heroes/channel-letters-night.jpg",
     features: ["Front-lit (face illuminated)", "Reverse-lit / Halo-lit (backglow effect)", "Open-face (exposed neon or LED)", "Combination front and back lit", "Custom colors and finishes", "Energy-efficient LED modules"],
@@ -74,7 +76,7 @@ export const services: Service[] = [
     slug: "vehicle-wraps",
     title: "Vehicle Wraps & Graphics",
     shortDescription: "Turn your vehicle into a mobile billboard with custom graphics and wraps.",
-    longDescription: "Vehicle wraps are one of the most cost-effective forms of advertising. According to the Outdoor Advertising Association of America (OAAA), a single vehicle wrap can generate 30,000-70,000 daily impressions. Whether you need a full fleet wrap or a single delivery van, our vehicle graphics are printed on premium 3M and Avery Dennison vinyl with UV-protective lamination that lasts 5-7 years. We have wrapped vehicles for companies ranging from local contractors to national brands like UberEats. Operating a commercial fleet in the GTA means severe exposure to road salt, sun blur, and ice; our strict, climate-controlled installation facility in Vaughan ensures the vinyl adhesive cures perfectly, preventing bubbling or premature peeling. A high-quality commercial wrap effectively turns your service vehicles into a 24/7 mobile billboard dominating the 401.",
+    longDescription: <>Vehicle wraps are one of the most cost-effective forms of advertising. According to the <a href="https://oaaa.org/" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">Outdoor Advertising Association of America (OAAA)</a>, a single vehicle wrap can generate 30,000-70,000 daily impressions. Whether you need a full fleet wrap or a single delivery van, our vehicle graphics are printed on premium <a href="https://www.3mcanada.ca/" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">3M</a> and <a href="https://graphics.averydennison.com/" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">Avery Dennison</a> vinyl with UV-protective lamination that lasts 5-7 years. We have wrapped vehicles for companies ranging from local contractors to national brands like UberEats. Operating a commercial fleet in the GTA means severe exposure to road salt, sun blur, and ice; our strict, climate-controlled installation facility in Vaughan ensures the vinyl adhesive cures perfectly, preventing bubbling or premature peeling. A high-quality commercial wrap effectively turns your service vehicles into a 24/7 mobile billboard dominating the 401.</>,
     image: "/images/services/vehicle-graphics.jpg",
     heroImage: "/images/heroes/vehicle-wrap-street.jpg",
     features: ["Full vehicle wraps", "Partial wraps and decals", "Fleet graphics programs", "Vinyl lettering", "Perforated window film", "Paint protection film"],
@@ -217,7 +219,7 @@ export const services: Service[] = [
     slug: "construction-signs",
     title: "Construction Signs",
     shortDescription: "Durable site signage for development, safety, and branding.",
-    longDescription: "Construction and development signage serves dual purposes: meeting strict regulatory requirements and aggressively marketing your project to the community. From large-format hoarding graphics to site identification signs, directional signage, and safety postings, we provide complete construction signage solutions. We intimately understand that developers and general contractors operate on incredibly tight deadlines; our Vaughan facility is optimized for rapid turnaround times on site-branding mesh banners, heavy-duty Alupanel site plans, and Ministry of Labour compliant safety boards. Properly executed hoarding doesn't just block a construction zone—it acts as a massive, high-impact billboard generating pre-sales and local hype long before the doors open.",
+    longDescription: <>Construction and development signage serves dual purposes: meeting strict regulatory requirements and aggressively marketing your project to the community. From large-format hoarding graphics to site identification signs, directional signage, and safety postings, we provide complete construction signage solutions. We intimately understand that developers and general contractors operate on incredibly tight deadlines; our Vaughan facility is optimized for rapid turnaround times on site-branding mesh banners, heavy-duty Alupanel site plans, and <a href="https://www.ontario.ca/page/ministry-labour-immigration-training-skills-development" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">Ministry of Labour</a> compliant safety boards. Properly executed hoarding doesn&apos;t just block a construction zone—it acts as a massive, high-impact billboard generating pre-sales and local hype long before the doors open.</>,
     image: "/images/services/construction-signs.jpg",
     heroImage: "/images/services/construction-signs.jpg",
     features: ["Hoarding graphics", "Site identification signs", "Directional signage", "Safety and compliance signs", "Real estate development signs", "Temporary event signage"],
@@ -260,7 +262,7 @@ export const services: Service[] = [
     slug: "awning-graphics",
     title: "Awning Graphics",
     shortDescription: "Stylish and functional awnings to enhance your storefront and provide shade.",
-    longDescription: "Awnings combine critical form and function — they protect your customers from severe weather, deliberately reduce air-conditioning load by blocking heat gain, and provide incredibly valuable branding space above your entrance. We offer custom-printed Sunbrella fabric awnings, vividly backlit awning signs, and rigid metal architectural canopies. Every custom awning structure we produce is meticulously hand-welded from rust-proof aluminum extrusion, specifically engineered to withstand heavy Ontario snow loads without buckling. Whether you are aiming for a classic European cafe aesthetic or a sleek, hyper-modern metal entrance piece, a branded awning instantly elevates the curbside appeal and architectural authority of your custom business signs.",
+    longDescription: <>Awnings combine critical form and function — they protect your customers from severe weather, deliberately reduce air-conditioning load by blocking heat gain, and provide incredibly valuable branding space above your entrance. We offer custom-printed <a href="https://www.sunbrella.com/" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">Sunbrella</a> fabric awnings, vividly backlit awning signs, and rigid metal architectural canopies. Every custom awning structure we produce is meticulously hand-welded from rust-proof aluminum extrusion, specifically engineered to withstand heavy Ontario snow loads without buckling. Whether you are aiming for a classic European cafe aesthetic or a sleek, hyper-modern metal entrance piece, a branded awning instantly elevates the curbside appeal and architectural authority of your custom business signs.</>,
     image: "/images/services/awning-graphics.jpg",
     heroImage: "/images/services/awning-graphics.jpg",
     features: ["Printed fabric awnings", "Backlit awning signs", "Rigid metal canopies", "Retractable awnings", "Custom shapes and sizes", "Weather-resistant materials"],

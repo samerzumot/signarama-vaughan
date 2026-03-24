@@ -113,11 +113,7 @@ export default function HomePage() {
 
       <ProcessSteps />
 
-      <div className="py-12">
-        <TrustStrip />
-      </div>
-
-
+      <TrustStrip />
 
       <CTABanner headline="Ready to Make Your Business Stand Out?" ctaText="Get a Free Quote" />
 
