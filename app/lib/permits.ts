@@ -4,8 +4,7 @@ export interface PermitData {
   processingTime: string;
   fees: { type: string; cost: string }[];
   requirements: string[];
-  contact: { name: string; phone: string; portalUrl: string };
-  bylawLink: string;
+  contact: { name: string; phone: string; portalUrl?: string };
   denialReasons: string[];
 }
 
@@ -31,7 +30,6 @@ export const permits: PermitData[] = [
       phone: "416-397-5330",
       portalUrl: "https://www.toronto.ca/services-payments/building-construction/sign-permits-information/"
     },
-    bylawLink: "https://www.toronto.ca/legdocs/municode/1184_694.pdf",
     denialReasons: [
       "Failure to adhere to strict Heritage Conservation District guidelines",
       "Sign exceeds maximum allowed percentage of the building facade",
@@ -59,7 +57,6 @@ export const permits: PermitData[] = [
       phone: "905-832-8510",
       portalUrl: "https://www.vaughan.ca/residential/by-laws-and-enforcement/property-by-laws/sign-enforcement-and-permits"
     },
-    bylawLink: "https://www.vaughan.ca/sites/default/files/2022-12/100-2022.pdf",
     denialReasons: [
       "Sign encroaches into municipal daylight triangles (blocking driver visibility)",
       "Illumination exceeds acceptable lumens strictly bordering residential zones",
@@ -86,7 +83,6 @@ export const permits: PermitData[] = [
       phone: "311 (or 905-615-4311 outside city limits)",
       portalUrl: "https://www.mississauga.ca/services-and-programs/building-and-renovating/sign-permits/"
     },
-    bylawLink: "https://www.mississauga.ca/wp-content/uploads/2021/08/13101511/Sign-Bylaw-0054-2002.pdf",
     denialReasons: [
       "Overall sign width exceeds the permitted percentage of the storefront frontage",
       "Not providing certified electrical documentation for LED illuminated features",
@@ -114,7 +110,6 @@ export const permits: PermitData[] = [
       phone: "905-874-2400",
       portalUrl: "https://www.brampton.ca/EN/residents/By-Law-Enforcement/Pages/Signs.aspx"
     },
-    bylawLink: "https://www.brampton.ca/EN/residents/By-Law-Enforcement/Pages/Signs.aspx",
     denialReasons: [
       "Sign does not conform to the zoning by-law for the specific commercial district",
       "Missing electrical permits for illuminated channel letters or cabinet signs",
@@ -142,7 +137,6 @@ export const permits: PermitData[] = [
       phone: "905-477-7000",
       portalUrl: "https://www.markham.ca/economic-development-business/building-permits"
     },
-    bylawLink: "https://www.markham.ca/economic-development-business/building-permits",
     denialReasons: [
       "Sign area exceeds the maximum permitted coverage for the building facade",
       "Non-compliance with Markham's urban design guidelines in heritage or downtown areas",
@@ -170,7 +164,6 @@ export const permits: PermitData[] = [
       phone: "905-771-8800",
       portalUrl: "https://www.richmondhill.ca/en/business/Sign-Permit.aspx"
     },
-    bylawLink: "https://www.richmondhill.ca/en/business/Sign-Permit.aspx",
     denialReasons: [
       "Sign placement conflicts with Richmond Hill's streetscape design standards",
       "Ground signs encroach on required visibility triangles at intersections",
@@ -195,10 +188,8 @@ export const permits: PermitData[] = [
     ],
     contact: {
       name: "Oakville Building Services",
-      phone: "905-845-6601",
-      portalUrl: "https://www.oakville.ca/business-development/building-permits-inspections/"
+      phone: "905-845-6601"
     },
-    bylawLink: "https://www.oakville.ca/business-development/sign-permits/",
     denialReasons: [
       "Non-conformity with Oakville's Sign By-law in heritage or Lakeshore areas",
       "Excessive illumination levels near residential neighbourhood borders",
@@ -223,10 +214,8 @@ export const permits: PermitData[] = [
     ],
     contact: {
       name: "Burlington Building and By-law",
-      phone: "905-335-7600",
-      portalUrl: "https://www.burlington.ca/en/services-for-you/sign-permits.asp"
+      phone: "905-335-7600"
     },
-    bylawLink: "https://www.burlington.ca/en/services-for-you/sign-permits.asp",
     denialReasons: [
       "Sign does not meet Downtown Burlington design standards",
       "Pylon sign height exceeds maximum allowable limits for the commercial zone",
@@ -251,10 +240,8 @@ export const permits: PermitData[] = [
     ],
     contact: {
       name: "Ajax Planning and Development Services",
-      phone: "905-619-2529",
-      portalUrl: "https://www.ajax.ca/en/business-and-development/sign-permits.aspx"
+      phone: "905-619-2529"
     },
-    bylawLink: "https://www.ajax.ca/en/business-and-development/sign-permits.aspx",
     denialReasons: [
       "Sign design does not conform to the commercial area's zoning requirements",
       "Missing structural analysis for large ground-mounted or pylon installations",
@@ -279,10 +266,8 @@ export const permits: PermitData[] = [
     ],
     contact: {
       name: "Pickering City Development Department",
-      phone: "905-420-4660",
-      portalUrl: "https://www.pickering.ca/en/business/sign-permits.aspx"
+      phone: "905-420-4660"
     },
-    bylawLink: "https://www.pickering.ca/en/business/sign-permits.aspx",
     denialReasons: [
       "Sign exceeds the maximum allowable area for the building's commercial zoning",
       "Ground sign placement violates required setbacks from the highway or road allowance",

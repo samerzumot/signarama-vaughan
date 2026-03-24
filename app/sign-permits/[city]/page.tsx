@@ -143,12 +143,11 @@ export default async function CityPermitPage({ params }: { params: Promise<{ cit
                 <h3 className="font-display text-2xl mb-4">Municipal Authority</h3>
                 <p className="text-white/80 font-medium mb-1">{permit.contact.name}</p>
                 <p className="text-brand-red font-bold text-lg mb-4">{permit.contact.phone}</p>
-                <a href={permit.contact.portalUrl} target="_blank" rel="noopener noreferrer" className="block text-sm text-white/60 hover:text-white hover:underline mb-2">
-                  Official Permitting Portal →
-                </a>
-                <a href={permit.bylawLink} target="_blank" rel="noopener noreferrer" className="block text-sm text-white/60 hover:text-white hover:underline">
-                  Read Original Sign Bylaw →
-                </a>
+                {permit.contact.portalUrl && (
+                  <a href={permit.contact.portalUrl} target="_blank" rel="noopener noreferrer" className="block text-sm text-white/60 hover:text-white hover:underline">
+                    Official Permitting Portal →
+                  </a>
+                )}
               </div>
             </div>
 
