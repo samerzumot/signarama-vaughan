@@ -62,8 +62,8 @@ export default function HomePage() {
               <p className="text-xs md:text-sm text-text-secondary font-bold uppercase tracking-wider">Google Rating</p>
             </div>
             <div>
-              <p className="font-display text-3xl md:text-4xl text-accent-gold mb-1">50k+ Hrs</p>
-              <p className="text-xs md:text-sm text-text-secondary font-bold uppercase tracking-wider">LED Lifespan</p>
+              <p className="font-display text-3xl md:text-4xl text-accent-gold mb-1">10,000+</p>
+              <p className="text-xs md:text-sm text-text-secondary font-bold uppercase tracking-wider">Projects Completed</p>
             </div>
           </div>
         </div>
