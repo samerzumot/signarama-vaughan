@@ -113,8 +113,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section className="section-padding">
         <div className="container-content">
           <SectionHeading title="What Our Clients Say" />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-narrow mx-auto">
-            {getTestimonialsForService(slug, 2).map((t, i) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+            {getTestimonialsForService(slug, 3).map((t, i) => (
               <TestimonialCard key={i} {...t} />
             ))}
           </div>
