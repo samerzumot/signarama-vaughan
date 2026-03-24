@@ -65,7 +65,7 @@ export default function AboutPage() {
             </p>
             <p>
               Unlike brokers who outsource production, we are a true manufacturing facility. From our state-of-the-art production center in Vaughan, we design, fabricate, and install custom signage for businesses of
-              every size — from neighborhood shops to national brands like Uber, Telus, and York University. Our
+              every size — from neighborhood shops to national brands like <a href="https://www.uber.com/ca/en/" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">Uber</a>, <a href="https://www.telus.com/en" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">Telus</a>, and <a href="https://www.yorku.ca/" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">York University</a>. Our
               in-house capabilities mean we control quality at every single stage. We utilize advanced CNC routing, large-format digital printing, and precision metal fabrication to create signs that don&apos;t just look spectacular on day one, but endure the harsh Canadian weather for years to come.
             </p>
             <p>

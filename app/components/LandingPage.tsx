@@ -8,12 +8,14 @@ import { testimonials } from "../lib/testimonials";
 import { PHONE_NUMBER, PHONE_HREF } from "../lib/gtag";
 import type { GalleryImage } from "../lib/services";
 
+import type { ReactNode } from "react";
+
 interface LandingPageProps {
   title: string;
   subtitle: string;
   heroImage: string;
   serviceName: string;
-  benefits: { title: string; description: string }[];
+  benefits: { title: string; description: ReactNode }[];
   processSteps?: string[];
   galleryImages?: GalleryImage[];
 }

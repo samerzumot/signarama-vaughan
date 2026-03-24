@@ -28,7 +28,7 @@ export default function CustomSignsLanding() {
       galleryImages={mixedGallery}
       benefits={[
         { title: "Every Sign Type", description: "Channel letters, storefront signs, vehicle wraps, pylon signs, indoor signs, and more." },
-        { title: "Enterprise Trusted", description: "Proven by Uber, Telus, York University, and businesses across the GTA." },
+        { title: "Enterprise Trusted", description: <>Proven by <a href="https://www.uber.com/ca/en/" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">Uber</a>, <a href="https://www.telus.com/en" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">Telus</a>, <a href="https://www.yorku.ca/" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">York University</a>, and businesses across the GTA.</> },
         { title: "Full Service", description: "Design, permits, fabrication, and installation — all handled under one roof." },
       ]}
     />
