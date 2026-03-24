@@ -75,6 +75,9 @@ export function Header({ variant = "full" }: { variant?: "full" | "landing" }) {
               <Link href="/about" className="font-body font-semibold text-text-primary hover:text-brand-red transition-colors text-[15px]">
                 About Us
               </Link>
+              <Link href="/sign-permits" className="font-body font-semibold text-brand-red hover:text-brand-red-light transition-colors text-[15px]">
+                Permit Guides
+              </Link>
             </nav>
 
             {/* Desktop Right — phone + quote */}
@@ -173,9 +176,16 @@ export function Header({ variant = "full" }: { variant?: "full" | "landing" }) {
               </Link>
             ))}
             <Link
+              href="/sign-permits"
+              onClick={() => setMenuOpen(false)}
+              className="block text-brand-red text-lg font-bold py-3 border-b border-surface-light mt-2"
+            >
+              Sign Permit Guides
+            </Link>
+            <Link
               href="/about"
               onClick={() => setMenuOpen(false)}
-              className="block text-text-primary text-lg font-semibold py-3 border-b border-surface-light mt-2"
+              className="block text-text-primary text-lg font-semibold py-3 border-b border-surface-light"
             >
               About Us
             </Link>
