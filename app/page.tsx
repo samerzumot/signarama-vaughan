@@ -69,8 +69,6 @@ export default function HomePage() {
         </div>
       </div>
 
-      <TrustStrip />
-
       {/* Services Grid */}
       <section className="section-padding">
         <div className="container-content">
@@ -114,6 +112,10 @@ export default function HomePage() {
       </section>
 
       <ProcessSteps />
+
+      <div className="py-12">
+        <TrustStrip />
+      </div>
 
       <CTABanner headline="Ready to Make Your Business Stand Out?" ctaText="Get a Free Quote" />
 
