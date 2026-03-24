@@ -31,7 +31,12 @@ export default function AboutPage() {
       "Vehicle Wraps", 
       "Channel Letters", 
       "Storefront Signs"
-    ]
+    ],
+    memberOf: {
+      "@type": "Organization",
+      "name": "International Sign Association",
+      "url": "https://signs.org"
+    }
   };
 
   return (
@@ -62,7 +67,7 @@ export default function AboutPage() {
               From our facility in Vaughan, we design, fabricate, and install custom signage for businesses of
               every size — from neighborhood shops to national brands like Uber, Telus, and York University. Our
               in-house capabilities mean we control quality at every stage, from the initial design concept through
-              CNC fabrication to final installation.
+              CNC fabrication to final installation. As proud members of the <a href="https://signs.org" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">International Sign Association (ISA)</a>, we ensure our work adheres to the highest industry standards for manufacturing and safety.
             </p>
             <p>
               We believe every business deserves signage that commands attention and builds trust. Whether you
