@@ -59,20 +59,24 @@ export default function AboutPage() {
           <SectionHeading title="Our Story" align="left" />
           <div className="space-y-4 text-text-secondary text-lg leading-relaxed">
             <p>
-              We are a full-service sign company backed by the world&apos;s largest sign franchise network, with over 700 locations across
+              We are a full-service custom sign company backed by the world&apos;s largest sign franchise network, with over 700 locations across
               more than 30 countries. But we are proudly local — founded in 1986, Signarama Vaughan is owned and operated by a team that understands the
-              Greater Toronto Area market inside and out.
+              Greater Toronto Area market inside and out. For decades, we have been the trusted signage partner for businesses looking to scale, rebrand, or launch with impact.
             </p>
             <p>
-              From our facility in Vaughan, we design, fabricate, and install custom signage for businesses of
+              Unlike brokers who outsource production, we are a true manufacturing facility. From our state-of-the-art production center in Vaughan, we design, fabricate, and install custom signage for businesses of
               every size — from neighborhood shops to national brands like Uber, Telus, and York University. Our
-              in-house capabilities mean we control quality at every stage, from the initial design concept through
-              CNC fabrication to final installation. As proud members of the <a href="https://signs.org" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">International Sign Association (ISA)</a>, we ensure our work adheres to the highest industry standards for manufacturing and safety.
+              in-house capabilities mean we control quality at every single stage. We utilize advanced CNC routing, large-format digital printing, and precision metal fabrication to create signs that don&apos;t just look spectacular on day one, but endure the harsh Canadian weather for years to come.
             </p>
             <p>
-              We believe every business deserves signage that commands attention and builds trust. Whether you
-              need a single storefront sign or a complete fleet wrap program, we bring the same level of precision
-              and care to every project.
+              We are obsessed with quality materials. That is why we exclusively partner with industry leaders like 3M, Avery Dennison, and Grimco. When you invest in a storefront sign, illuminated channel letters, or a commercial vehicle wrap, you can rest assured it is built with premium cast vinyls, architectural-grade aluminum, and high-efficiency LED lighting systems designed for a 50,000+ hour lifespan. 
+            </p>
+            <p>
+              Beyond manufacturing, we pride ourselves on making the complex process entirely seamless for our clients. Signage involves strict municipal compliance, landlord approvals, and structural engineering. Our dedicated project managers actively navigate the specific sign permit by-laws across Vaughan, Toronto, Mississauga, Brampton, and Markham, ensuring your project is fully legal and compliant before manufacturing even begins. As proud members of the <a href="https://signs.org" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">International Sign Association (ISA)</a>, we ensure our work adheres to the highest industry standards for manufacturing and safety.
+            </p>
+            <p>
+              We believe every business deserves signage that commands attention, builds unwavering trust, and drives real foot traffic. Whether you
+              need a single storefront sign or a complete national fleet wrap program, we bring the same level of precision, care, and franchise-backed reliability to every project.
             </p>
           </div>
         </div>

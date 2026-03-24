@@ -44,7 +44,7 @@ export function Footer() {
               <li><Link href="/contact" className="text-white/60 hover:text-white text-sm transition-colors">Contact</Link></li>
               <li><Link href="/sustainability" className="text-white/60 hover:text-white text-sm transition-colors">Sustainability &amp; Standards</Link></li>
               <li>
-                <a href="http://signarama.ca/on-vaughan" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white text-sm transition-colors">
+                <a href="https://signarama.ca/on-vaughan" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white text-sm transition-colors">
                   Corporate Profile
                 </a>
               </li>

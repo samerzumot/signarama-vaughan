@@ -40,6 +40,9 @@ export const metadata: Metadata = {
   description:
     "We design, fabricate, and install custom signs for businesses across the GTA. Channel letters, storefront signs, vehicle wraps & more. Call (905) 597-8635.",
   metadataBase: new URL("https://www.custombusinesssigns.ca"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "en_CA",
@@ -129,8 +132,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${dmSerifDisplay.variable} ${dmSans.variable} ${nunitoSans.variable}`}>
       <head>
-        {/* Google Tag Manager */}
-        <script
+        <Script
+          id="gtm"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -139,7 +143,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-NXHK4BDB');`,
           }}
         />
-        {/* End Google Tag Manager */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
