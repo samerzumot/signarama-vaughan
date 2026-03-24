@@ -33,7 +33,10 @@ export default function HomePage() {
 
         {/* Bottom: tagline + CTAs */}
         <div className="relative z-10 container-content text-center py-12 md:py-16 flex flex-col items-center justify-center">
-          <p className="text-text-primary text-lg md:text-xl lg:text-2xl font-semibold mb-6 md:mb-8 animate-fade-in max-w-3xl mx-auto">
+          <h1 className="font-display text-display-lg text-text-primary mb-2 md:mb-4 animate-fade-in text-balance">
+            Custom Sign Fabrication &amp; Installation in the GTA
+          </h1>
+          <p className="text-text-primary text-lg md:text-xl font-semibold mb-6 md:mb-8 animate-fade-in max-w-3xl mx-auto">
             Custom design, fabrication &amp; installation for GTA businesses since 1986
           </p>
           <HeroActions />
@@ -41,6 +44,31 @@ export default function HomePage() {
       </section>
 
       <ClientLogos />
+      
+      {/* Stats / Trust Info */}
+      <div className="bg-surface-cream border-y border-surface-light py-8">
+        <div className="container-content">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+              <p className="font-display text-3xl md:text-4xl text-accent-gold mb-1">Since 1986</p>
+              <p className="text-xs md:text-sm text-text-secondary font-bold uppercase tracking-wider">Serving the GTA</p>
+            </div>
+            <div>
+              <p className="font-display text-3xl md:text-4xl text-accent-gold mb-1">700+</p>
+              <p className="text-xs md:text-sm text-text-secondary font-bold uppercase tracking-wider">Locations Worldwide</p>
+            </div>
+            <div>
+              <p className="font-display text-3xl md:text-4xl text-accent-gold mb-1">4.9★</p>
+              <p className="text-xs md:text-sm text-text-secondary font-bold uppercase tracking-wider">Google Rating</p>
+            </div>
+            <div>
+              <p className="font-display text-3xl md:text-4xl text-accent-gold mb-1">50k+ Hrs</p>
+              <p className="text-xs md:text-sm text-text-secondary font-bold uppercase tracking-wider">LED Lifespan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <TrustStrip />
 
       {/* Services Grid */}

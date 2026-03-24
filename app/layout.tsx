@@ -51,12 +51,20 @@ export const metadata: Metadata = {
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["LocalBusiness", "Organization"],
   name: "Sign Fabrication & Installation Contractors",
   description: "Custom signs and signage for businesses in the Greater Toronto Area",
   url: "https://www.custombusinesssigns.ca",
+  logo: "https://www.custombusinesssigns.ca/images/og-image.jpg",
+  image: "https://www.custombusinesssigns.ca/images/og-image.jpg",
+  foundingDate: "1986",
   telephone: "+19055978635",
   email: "info@signarama-vaughan.com",
+  sameAs: [
+    "https://www.facebook.com/signaramavaughan",
+    "https://www.instagram.com/signaramavaughan",
+    "https://www.linkedin.com/company/signarama-vaughan"
+  ],
   address: {
     "@type": "PostalAddress",
     streetAddress: "7250 Keele St, Unit 286",
@@ -71,7 +79,46 @@ const localBusinessSchema = {
     longitude: -79.4975323,
   },
   areaServed: "Greater Toronto Area",
+  openingHours: "Mo-Fr 09:00-17:00",
   priceRange: "$$",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "125"
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Signage Services",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Channel Letters" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Storefront Signs" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vehicle Wraps & Graphics" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Illuminated Signs" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Pylon Signs" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Indoor Signs" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "3D Signs & Lettering" } }
+    ]
+  },
+  knowsAbout: [
+    "Sign Fabrication",
+    "Channel Letters",
+    "Vehicle Wraps",
+    "Illuminated Signs",
+    "Sign Installation",
+    "Graphic Design"
+  ]
+};
+
+const webSiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  url: "https://www.custombusinesssigns.ca",
+  name: "Signarama Vaughan",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: "https://www.custombusinesssigns.ca/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
 };
 
 export default function RootLayout({
@@ -96,6 +143,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
         />
       </head>
       <body>

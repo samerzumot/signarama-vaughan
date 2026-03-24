@@ -13,8 +13,33 @@ export const metadata = createMetadata({
 });
 
 export default function AboutPage() {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Signarama Vaughan",
+    foundingDate: "1986",
+    url: "https://www.custombusinesssigns.ca",
+    logo: "https://www.custombusinesssigns.ca/images/og-image.jpg",
+    sameAs: [
+      "https://www.facebook.com/signaramavaughan",
+      "https://www.instagram.com/signaramavaughan",
+      "https://www.linkedin.com/company/signarama-vaughan"
+    ],
+    knowsAbout: [
+      "Sign Fabrication", 
+      "Sign Installation", 
+      "Vehicle Wraps", 
+      "Channel Letters", 
+      "Storefront Signs"
+    ]
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
       <section className="bg-surface-cream border-b border-surface-light pt-36 pb-16">
         <div className="container-content text-center">
           <h1 className="font-display text-display-lg text-text-primary mb-4">About Signarama Vaughan</h1>
@@ -30,7 +55,7 @@ export default function AboutPage() {
           <div className="space-y-4 text-text-secondary text-lg leading-relaxed">
             <p>
               We are a full-service sign company backed by the world&apos;s largest sign franchise network, with over 700 locations across
-              more than 30 countries. But we are proudly local — Signarama Vaughan is owned and operated by a team that understands the
+              more than 30 countries. But we are proudly local — founded in 1986, Signarama Vaughan is owned and operated by a team that understands the
               Greater Toronto Area market inside and out.
             </p>
             <p>

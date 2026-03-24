@@ -34,8 +34,25 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
   const hasGallery = service.gallery && service.gallery.length > 0;
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: service.title,
+    description: service.shortDescription,
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Signarama Vaughan"
+    },
+    areaServed: "Greater Toronto Area",
+    image: `https://www.custombusinesssigns.ca${service.image}`
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       {/* Header */}
       <section className="bg-surface-cream border-b border-surface-light pt-36 pb-12">
         <div className="container-content">
