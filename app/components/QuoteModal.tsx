@@ -10,7 +10,7 @@ export function QuoteModal() {
   useEffect(() => {
     const handler = (e: Event) => {
       const detail = (e as CustomEvent).detail;
-      if (detail?.signType) setSignType(detail.signType);
+      setSignType(detail?.signType || "");
       setOpen(true);
     };
     window.addEventListener("open-quote-modal", handler);

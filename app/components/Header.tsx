@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { PHONE_NUMBER, PHONE_HREF, reportConversion } from "../lib/gtag";
 import { services } from "../lib/services";
 
@@ -10,6 +11,15 @@ export function Header({ variant = "full" }: { variant?: "full" | "landing" }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Helper to get current service title if on a service page
+  const getCurrentServiceTitle = () => {
+    if (!pathname.startsWith("/services/")) return "";
+    const slug = pathname.replace("/services/", "");
+    const service = services.find(s => s.slug === slug);
+    return service ? service.title : "";
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -87,7 +97,7 @@ export function Header({ variant = "full" }: { variant?: "full" | "landing" }) {
                 {PHONE_NUMBER}
               </a>
               <button
-                onClick={() => window.dispatchEvent(new CustomEvent("open-quote-modal"))}
+                onClick={() => window.dispatchEvent(new CustomEvent("open-quote-modal", { detail: { signType: getCurrentServiceTitle() } }))}
                 className="bg-brand-red text-white font-bold px-6 py-2.5 rounded-button text-sm uppercase tracking-wider hover:bg-brand-red-dark transition-colors shadow-cta"
               >
                 Get a Quote
@@ -211,7 +221,7 @@ export function Header({ variant = "full" }: { variant?: "full" | "landing" }) {
             <button
               onClick={() => {
                 setMenuOpen(false);
-                window.dispatchEvent(new CustomEvent("open-quote-modal"));
+                window.dispatchEvent(new CustomEvent("open-quote-modal", { detail: { signType: getCurrentServiceTitle() } }));
               }}
               className="w-full bg-brand-red text-white font-bold py-4 rounded-button text-base uppercase tracking-wider shadow-cta"
             >

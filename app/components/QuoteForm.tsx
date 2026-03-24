@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, FormEvent } from "react";
+import { useState, useEffect, useRef, FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import { services } from "../lib/services";
 
@@ -21,8 +21,16 @@ export function QuoteForm({
   const [submitting, setSubmitting] = useState(false);
   const [fileNames, setFileNames] = useState<string[]>([]);
   const [sitePhotoNames, setSitePhotoNames] = useState<string[]>([]);
+  const [selectedService, setSelectedService] = useState(preselectedService || "");
   const fileInputRef = useRef<HTMLInputElement>(null);
   const sitePhotoRef = useRef<HTMLInputElement>(null);
+
+  // Sync state if prop changes (important for modal re-opening or navigation)
+  useEffect(() => {
+    if (preselectedService) {
+      setSelectedService(preselectedService);
+    }
+  }, [preselectedService]);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -107,7 +115,8 @@ export function QuoteForm({
         <input type="text" name="business_address" placeholder="Business Address" className={inputClass} />
         <select
           name="sign_type"
-          defaultValue={preselectedService || ""}
+          value={selectedService}
+          onChange={(e) => setSelectedService(e.target.value)}
           className={`${inputClass} text-text-primary`}
         >
           <option value="">Select Sign Type</option>
