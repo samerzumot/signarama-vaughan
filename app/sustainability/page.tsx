@@ -96,7 +96,7 @@ export default function SustainabilityPage() {
                 <div className="bg-surface-cream p-6 rounded-card border border-surface-light shadow-sm">
                   <h4 className="font-display text-xl text-text-primary mb-3">Vaughan</h4>
                   <ul className="space-y-2 text-sm">
-                    <li><a href="https://www.vaughan.ca/business/building-and-renovating" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">City of Vaughan Sign Permits</a></li>
+                    <li><a href="https://www.vaughan.ca/residential/by-laws-and-enforcement/property-by-laws/sign-enforcement-and-permits" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">City of Vaughan Sign Permits</a></li>
                     <li><a href="https://vaughanchamber.ca/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-brand-red transition-colors">Vaughan Chamber of Commerce</a></li>
                   </ul>
                 </div>
@@ -117,7 +117,7 @@ export default function SustainabilityPage() {
                 <div className="bg-surface-cream p-6 rounded-card border border-surface-light shadow-sm">
                   <h4 className="font-display text-xl text-text-primary mb-3">Brampton</h4>
                   <ul className="space-y-2 text-sm">
-                    <li><a href="https://www.brampton.ca/EN/Business/building-permits/Pages/Welcome.aspx" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">Brampton Sign Permits</a></li>
+                    <li><a href="https://www.brampton.ca/EN/residents/By-Law-Enforcement/Pages/Signs.aspx" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">Brampton Sign Permits</a></li>
                     <li><a href="https://bramptonbot.com/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-brand-red transition-colors">Brampton Board of Trade</a></li>
                   </ul>
                 </div>
