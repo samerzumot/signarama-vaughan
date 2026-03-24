@@ -124,14 +124,14 @@ export default function SustainabilityPage() {
                 <div className="bg-surface-cream p-6 rounded-card border border-surface-light shadow-sm">
                   <h4 className="font-display text-xl text-text-primary mb-3">Markham</h4>
                   <ul className="space-y-2 text-sm">
-                    <li><a href="https://www.markham.ca/wps/portal/home/business/building-permits/" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">Markham Sign Permits</a></li>
+                    <li><a href="https://www.markham.ca/economic-development-business/building-permits" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">Markham Sign Permits</a></li>
                     <li><a href="https://markham-chamber.ca/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-brand-red transition-colors">Markham Board of Trade</a></li>
                   </ul>
                 </div>
                 <div className="bg-surface-cream p-6 rounded-card border border-surface-light shadow-sm">
                   <h4 className="font-display text-xl text-text-primary mb-3">Richmond Hill</h4>
                   <ul className="space-y-2 text-sm">
-                    <li><a href="https://www.richmondhill.ca/en/business/building-and-zoning.aspx" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">Richmond Hill Sign Permits</a></li>
+                    <li><a href="https://www.richmondhill.ca/en/business/Sign-Permit.aspx" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:underline font-medium">Richmond Hill Sign Permits</a></li>
                     <li><a href="https://rhbot.ca/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-brand-red transition-colors">Richmond Hill Board of Trade</a></li>
                   </ul>
                 </div>
