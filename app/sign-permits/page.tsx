@@ -49,16 +49,16 @@ export default function SignPermitsHubPage() {
         </div>
       </section>
 
-      {/* Lead Capture / PDF Download */}
+      {/* Lead Capture */}
       <section className="section-padding bg-surface-charcoal text-white">
         <div className="container-content">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-display text-display-md mb-6">Download the Ultimate 2026 Permit Checklist & Fee Calculator</h2>
+            <h2 className="font-display text-display-md mb-6">Get the 2026 GTA Permit Guide (PDF)</h2>
             <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
-              Skip the municipal headache. Get our internal Excel calculator to estimate your exact permit fees, plus our master checklist for avoiding 90% of permit denials.
+              We&apos;ll email you a PDF with permit fees, timelines, and application requirements for all 10 GTA municipalities — ready to save, print, or share with your team.
             </p>
             <PermitGuideForm />
-            <p className="text-sm text-white/50 mt-4">100% free resource. We never spam.</p>
+            <p className="text-sm text-white/50 mt-4">Free resource. No spam, just the guide.</p>
           </div>
         </div>
       </section>

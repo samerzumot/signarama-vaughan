@@ -40,9 +40,9 @@ export function PermitGuideForm() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="font-display text-2xl text-white mb-2">Check Your Inbox!</h3>
+        <h3 className="font-display text-2xl text-white mb-2">Guide Sent!</h3>
         <p className="text-white/70 text-lg">
-          We&apos;ve sent the 2026 GTA Sign Permit Guide to your email. If you don&apos;t see it, check your spam folder.
+          Check your inbox for the full GTA permit reference guide. If you don&apos;t see it within a few minutes, check your spam folder.
         </p>
       </div>
     );
@@ -64,7 +64,7 @@ export function PermitGuideForm() {
         disabled={status === "loading"}
         className="bg-brand-red text-white font-bold py-4 px-8 rounded-button hover:bg-brand-red-light transition-colors shadow-cta whitespace-nowrap disabled:opacity-60"
       >
-        {status === "loading" ? "Sending..." : "Send Me the PDF"}
+        {status === "loading" ? "Sending..." : "Send Me the Guide"}
       </button>
       {status === "error" && (
         <p className="text-red-300 text-sm mt-2 sm:mt-0 sm:self-center">{errorMsg}</p>
