@@ -19,12 +19,12 @@ export const testimonials: Testimonial[] = [
   },
   // Window Signage / Graphics
   {
-    quote: "Signarama came highly recommended and did not disappoint. Abe was very easy to deal with, patient and considerate. Graphic quality was excellent. The window signage looks great.",
-    author: "Rhea Uy",
-    date: "2 years ago",
+    quote: "Abe is a person you can trust with any kind of signs and graphics project. He made our sign perfectly with a reasonable price. The whole process was smooth with no issues. I would definitely recommend his service to anyone looking for such graphic works.",
+    author: "Saniterica",
+    date: "4 months ago",
     rating: 5,
-    googleLink: "https://maps.app.goo.gl/tRiTVz3HTAzWG8bD6",
-    serviceSlugs: ["window-graphics", "storefront-signs"],
+    googleLink: "https://share.google/DtenT9MObruNlHRNJ",
+    serviceSlugs: ["indoor-signs"],
   },
   // 3D / Lobby / Custom
   {
@@ -85,12 +85,12 @@ export const testimonials: Testimonial[] = [
 export function getTestimonialsForService(serviceSlug: string, count = 3): Testimonial[] {
   // 1. Get exact matches
   const tagged = testimonials.filter(t => t.serviceSlugs?.includes(serviceSlug));
-  
+
   if (tagged.length >= count) return tagged.slice(0, count);
-  
+
   // 2. Fill remaining with generic or other reviews, avoiding duplicates
   const others = testimonials.filter(t => !tagged.includes(t));
-  
+
   // Prioritize "high-quality" generic ones if possible (determined by presence or absence of slugs)
   const generic = others.sort((a, b) => {
     const aWeight = (a.serviceSlugs?.length || 0);
