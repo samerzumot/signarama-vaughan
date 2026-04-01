@@ -68,7 +68,7 @@ const localBusinessSchema = {
   "name": "Custom Business Signs Toronto",
   "description": "Custom signs and signage for businesses in the Greater Toronto Area",
   "url": "https://www.custombusinesssigns.ca",
-  "logo": "https://www.custombusinesssigns.ca/images/og-image.jpg",
+  "logo": "https://www.custombusinesssigns.ca/images/logo/cbs-logo2.png",
   "image": "https://www.custombusinesssigns.ca/images/og-image.jpg",
   "telephone": "+19055978635",
   "email": "info@signarama-vaughan.com",

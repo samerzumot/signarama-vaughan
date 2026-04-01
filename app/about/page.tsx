@@ -19,7 +19,7 @@ export default function AboutPage() {
     name: "Custom Business Signs Toronto",
     foundingDate: "1986",
     url: "https://www.custombusinesssigns.ca",
-    logo: "https://www.custombusinesssigns.ca/images/og-image.jpg",
+    logo: "https://www.custombusinesssigns.ca/images/logo/cbs-logo2.png",
     sameAs: [
       "https://www.facebook.com/signaramavaughan",
       "https://www.instagram.com/signaramavaughan",

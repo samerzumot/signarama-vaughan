@@ -43,16 +43,16 @@ export function Header({ variant = "full" }: { variant?: "full" | "landing" }) {
         }`}
     >
       <div className="container-content flex items-center justify-between gap-4">
-        {/* Logo Replacement - Descriptive Text */}
+        {/* Main Logo */}
         <Link href="/" className="flex-shrink-0 flex items-center group">
-          <div className="flex flex-col">
-            <span className="text-text-primary text-xl md:text-2xl font-black tracking-tight leading-none uppercase group-hover:text-brand-red transition-colors" style={{ fontFamily: 'var(--font-logo), sans-serif' }}>
-              Custom Business Signs
-            </span>
-            <span className="text-brand-red font-black text-sm md:text-base leading-tight mt-0.5 tracking-[0.2em] uppercase">
-              Toronto
-            </span>
-          </div>
+          <Image 
+            src="/images/logo/cbs-logo2.png" 
+            alt="Custom Business Signs Toronto" 
+            width={514} 
+            height={635} 
+            className="h-20 w-auto object-contain group-hover:opacity-90 transition-transform hover:scale-105"
+            priority 
+          />
         </Link>
 
         {variant === "full" && (
@@ -154,10 +154,14 @@ export function Header({ variant = "full" }: { variant?: "full" | "landing" }) {
           {/* Mobile menu header */}
           <div className="flex items-center justify-between px-5 py-3 border-b border-surface-light">
             <Link href="/" onClick={() => setMenuOpen(false)} className="flex items-center">
-              <div className="flex flex-col">
-                <span className="text-text-primary text-lg font-black tracking-tight leading-none uppercase" style={{ fontFamily: 'var(--font-logo), sans-serif' }}>Custom Business Signs</span>
-                <span className="text-brand-red font-bold text-xs leading-tight mt-0.5 tracking-[0.15em] uppercase">Toronto</span>
-              </div>
+              <Image 
+                src="/images/logo/cbs-logo2.png" 
+                alt="Custom Business Signs Toronto" 
+                width={514} 
+                height={635} 
+                className="h-16 w-auto object-contain"
+                priority 
+              />
             </Link>
             <button
               onClick={() => setMenuOpen(false)}
