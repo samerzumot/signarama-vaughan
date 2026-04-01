@@ -1,6 +1,6 @@
 # Google Ads API Developer Access — Design Documentation
 
-**Company Name:** Signarama Vaughan (Custom Business Signs)
+**Company Name:** Custom Business Signs Toronto (Custom Business Signs)
 
 **Website:** https://custombusinesssigns.ca
 
@@ -8,7 +8,7 @@
 
 ## Business Model
 
-Signarama Vaughan is a custom signage company that designs, fabricates, and installs commercial signage for businesses across the Greater Toronto Area (GTA). Our services include channel letters, storefront signs, pylon signs, vehicle wraps, digital signs, LED backlit signs, light boxes, window graphics, construction signs, indoor/office signs, and custom signs.
+Custom Business Signs Toronto is a custom signage company that designs, fabricates, and installs commercial signage for businesses across the Greater Toronto Area (GTA). Our services include channel letters, storefront signs, pylon signs, vehicle wraps, digital signs, LED backlit signs, light boxes, window graphics, construction signs, indoor/office signs, and custom signs.
 
 We operate a single business website (custombusinesssigns.ca) where potential clients can browse our sign categories, view our portfolio of completed projects, and submit quote requests. We generate leads through Google Ads campaigns targeting local businesses seeking signage solutions. We only advertise for our own business and do not manage ads for any third parties.
 
@@ -78,7 +78,7 @@ Below is a mockup of what our internal reporting dashboard will display:
 
 ---
 
-### Signarama Vaughan — Ads Performance Dashboard
+### Custom Business Signs Toronto — Ads Performance Dashboard
 
 **Google Ads Account-Level Performance — February 2026**
 

@@ -6,7 +6,7 @@ import { createMetadata } from "../lib/metadata";
 import { permits } from "../lib/permits";
 
 export const metadata = createMetadata({
-  title: "Complete Sign Permit Guide for GTA Businesses (2026) | Signarama Vaughan",
+  title: "Complete Sign Permit Guide for GTA Businesses (2026) | Custom Business Signs Toronto",
   description: "Navigate sign permits across the GTA effortlessly. Compare 2026 requirements, fees, and timelines for Toronto, Vaughan, Mississauga, and beyond.",
   path: "/sign-permits",
 });
@@ -135,7 +135,7 @@ export default function SignPermitsHubPage() {
             <div className="bg-surface-cream p-8 rounded-card border border-surface-light text-center">
               <h3 className="font-display text-2xl text-text-primary mb-4">Let Us Handle the Red Tape</h3>
               <p className="text-text-secondary mb-8">
-                Every custom sign ordered through Signarama Vaughan includes completely managed permitting. We draw the plans, file the paperwork, and secure the approvals.
+                Every custom sign ordered through Custom Business Signs Toronto includes completely managed permitting. We draw the plans, file the paperwork, and secure the approvals.
               </p>
               <Link href="/contact" className="inline-block bg-text-primary text-white font-bold py-4 px-8 rounded-button hover:bg-brand-red transition-colors">
                 Request a Sign Consulation

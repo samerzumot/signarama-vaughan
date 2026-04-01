@@ -51,7 +51,7 @@ function generatePermitPDF(): Buffer {
   doc.setFont("helvetica", "normal");
   doc.text("Fees, Timelines & Requirements for 10 Municipalities", pageWidth / 2, 30, { align: "center" });
   doc.setFontSize(9);
-  doc.text("Prepared by Signarama Vaughan  |  (905) 597-8635  |  custombusinesssigns.ca", pageWidth / 2, 38, { align: "center" });
+  doc.text("Prepared by Custom Business Signs Toronto  |  (905) 597-8635  |  custombusinesssigns.ca", pageWidth / 2, 38, { align: "center" });
 
   y = 55;
 
@@ -195,7 +195,7 @@ export async function POST(request: NextRequest) {
 
     // 3. Send internal notification
     const { error: notifyError } = await getResend().emails.send({
-      from: "Signarama Vaughan <quotes@custombusinesssigns.ca>",
+      from: "Custom Business Signs Toronto <quotes@custombusinesssigns.ca>",
       to: "info@signarama-vaughan.com",
       subject: `📥 New Permit Guide Request: ${email}`,
       html: `
@@ -223,7 +223,7 @@ export async function POST(request: NextRequest) {
 
     // 4. Send the guide email WITH the PDF attached
     const { error: confirmError } = await getResend().emails.send({
-      from: "Signarama Vaughan <quotes@custombusinesssigns.ca>",
+      from: "Custom Business Signs Toronto <quotes@custombusinesssigns.ca>",
       to: email,
       subject: "Your 2026 GTA Sign Permit Guide (PDF Attached)",
       attachments: [
@@ -265,7 +265,7 @@ export async function POST(request: NextRequest) {
           </div>
           <div style="background: #1a1a2e; padding: 16px 24px; text-align: center;">
             <p style="color: #999; font-size: 12px; margin: 0;">
-              Signarama Vaughan · 7250 Keele St, Unit 286, Vaughan ON L4K 1Z8<br/>
+              Custom Business Signs Toronto · 7250 Keele St, Unit 286, Vaughan ON L4K 1Z8<br/>
               <a href="https://www.custombusinesssigns.ca" style="color: #da291c;">custombusinesssigns.ca</a>
             </p>
           </div>

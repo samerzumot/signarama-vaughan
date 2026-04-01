@@ -41,7 +41,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     description: service.shortDescription,
     provider: {
       "@type": "LocalBusiness",
-      name: "Signarama Vaughan"
+      name: "Custom Business Signs Toronto"
     },
     areaServed: "Greater Toronto Area",
     image: `https://www.custombusinesssigns.ca${service.image}`

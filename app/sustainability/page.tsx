@@ -3,7 +3,7 @@ import { CTABanner } from "../components/CTABanner";
 import { createMetadata } from "../lib/metadata";
 
 export const metadata = createMetadata({
-  title: "Sustainability & Standards | Signarama Vaughan",
+  title: "Sustainability & Standards | Custom Business Signs Toronto",
   description: "We align with UN SDGs for sustainable manufacturing, use premium materials from 3M and Grimco, and manage sign permits across the entire GTA.",
   path: "/sustainability",
 });

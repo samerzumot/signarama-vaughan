@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
   if (!permit) return {};
   
   return createMetadata({
-    title: `${permit.city} Sign Permits & Bylaws (2026 Guide) | Signarama Vaughan`,
+    title: `${permit.city} Sign Permits & Bylaws (2026 Guide) | Custom Business Signs Toronto`,
     description: `Complete guide to ${permit.city} sign permit fees, requirements, and application processing times for 2026. Avoid bylaw fines and application denials.`,
     path: `/sign-permits/${permit.slug}`,
   });
@@ -35,7 +35,7 @@ export default async function CityPermitPage({ params }: { params: Promise<{ cit
     description: `Complete guide to ${permit.city} sign permit fees, requirements, and application processing times.`,
     publisher: {
       "@type": "Organization",
-      name: "Signarama Vaughan"
+      name: "Custom Business Signs Toronto"
     }
   };
 

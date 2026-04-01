@@ -39,7 +39,7 @@ export async function POST(request: NextRequest) {
 
         // Build email HTML
         const html = `
-      <h2>${isPartial ? "[PARTIAL LEAD] - Step 1 Captured" : "New Full Quote Request"} - Signarama Vaughan</h2>
+      <h2>${isPartial ? "[PARTIAL LEAD] - Step 1 Captured" : "New Full Quote Request"} - Custom Business Signs Toronto</h2>
       <p>${isPartial ? "Note: This lead completed Step 1 but has not yet submitted Step 2." : "All project details and attachments are included below."}</p>
       <table style="border-collapse: collapse; width: 100%;">
         <tr><td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Name</td><td style="padding: 8px; border: 1px solid #ddd;">${name}</td></tr>
@@ -58,7 +58,7 @@ export async function POST(request: NextRequest) {
             : `New Quote Request from ${name}`;
 
         const { error } = await getResend().emails.send({
-            from: "Signarama Vaughan <quotes@custombusinesssigns.ca>",
+            from: "Custom Business Signs Toronto <quotes@custombusinesssigns.ca>",
             to: "info@signarama-vaughan.com",
             replyTo: email,
             subject,

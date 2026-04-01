@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_CA",
-    siteName: "Custom Sign Fabrication",
+    siteName: "Custom Business Signs Toronto",
     images: [{ url: "/images/og-image.jpg", width: 1200, height: 630 }],
   },
   robots: { index: true, follow: true },
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "Organization"],
-  name: "Sign Fabrication & Installation Contractors",
+  name: "Custom Business Signs Toronto",
   description: "Custom signs and signage for businesses in the Greater Toronto Area",
   url: "https://www.custombusinesssigns.ca",
   logo: "https://www.custombusinesssigns.ca/images/og-image.jpg",
@@ -116,7 +116,7 @@ const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   url: "https://www.custombusinesssigns.ca",
-  name: "Signarama Vaughan",
+  name: "Custom Business Signs Toronto",
   potentialAction: {
     "@type": "SearchAction",
     target: "https://www.custombusinesssigns.ca/search?q={search_term_string}",

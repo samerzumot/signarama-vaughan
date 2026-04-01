@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
             <section className="section-padding">
                 <div className="container-content max-w-narrow prose prose-lg prose-headings:font-display prose-headings:font-normal prose-a:text-brand-red hover:prose-a:text-brand-red-dark">
                     <p>
-                        At Signarama Vaughan (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;), we respect your privacy and are committed to protecting it through our compliance with this policy. This Privacy Policy describes the types of information we may collect from you or that you may provide when you visit our website (the &quot;Website&quot;) and our practices for collecting, using, maintaining, protecting, and disclosing that policy.
+                        At Custom Business Signs Toronto (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;), we respect your privacy and are committed to protecting it through our compliance with this policy. This Privacy Policy describes the types of information we may collect from you or that you may provide when you visit our website (the &quot;Website&quot;) and our practices for collecting, using, maintaining, protecting, and disclosing that policy.
                     </p>
 
                     <h2>Information We Collect</h2>

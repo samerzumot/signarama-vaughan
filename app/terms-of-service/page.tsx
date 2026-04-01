@@ -22,7 +22,7 @@ export default function TermsOfServicePage() {
             <section className="section-padding">
                 <div className="container-content max-w-narrow prose prose-lg prose-headings:font-display prose-headings:font-normal prose-a:text-brand-red hover:prose-a:text-brand-red-dark">
                     <p>
-                        These Terms of Service (&quot;Terms&quot;) govern your use of the Signarama Vaughan website (&quot;Website&quot;) and any services provided by us. By accessing or using our Website and services, you agree to be bound by these Terms.
+                        These Terms of Service (&quot;Terms&quot;) govern your use of the Custom Business Signs Toronto website (&quot;Website&quot;) and any services provided by us. By accessing or using our Website and services, you agree to be bound by these Terms.
                     </p>
 
                     <h2>1. User Agreement</h2>
@@ -37,12 +37,12 @@ export default function TermsOfServicePage() {
 
                     <h2>3. Intellectual Property</h2>
                     <p>
-                        The content, features, and functionality of the Website, including but not limited to all text, graphics, logos, images, and software, are the exclusive property of Signarama Vaughan or our licensors and are protected by intellectual property laws. You may not reproduce, distribute, modify, create derivative works of, publicly display, or publicly perform any of the content without our prior written consent.
+                        The content, features, and functionality of the Website, including but not limited to all text, graphics, logos, images, and software, are the exclusive property of Custom Business Signs Toronto or our licensors and are protected by intellectual property laws. You may not reproduce, distribute, modify, create derivative works of, publicly display, or publicly perform any of the content without our prior written consent.
                     </p>
 
                     <h2>4. Limitation of Liability</h2>
                     <p>
-                        In no event shall Signarama Vaughan, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the Website.
+                        In no event shall Custom Business Signs Toronto, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the Website.
                     </p>
 
                     <h2>5. Third-Party Links</h2>

@@ -16,7 +16,7 @@ export default function AboutPage() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Signarama Vaughan",
+    name: "Custom Business Signs Toronto",
     foundingDate: "1986",
     url: "https://www.custombusinesssigns.ca",
     logo: "https://www.custombusinesssigns.ca/images/og-image.jpg",
@@ -47,7 +47,7 @@ export default function AboutPage() {
       />
       <section className="bg-surface-cream border-b border-surface-light pt-36 pb-16">
         <div className="container-content text-center">
-          <h1 className="font-display text-display-lg text-text-primary mb-4">About Signarama Vaughan</h1>
+          <h1 className="font-display text-display-lg text-text-primary mb-4">About Custom Business Signs Toronto</h1>
           <p className="text-text-secondary text-lg max-w-2xl mx-auto">
             Your full-service signage partner in the Greater Toronto Area
           </p>
@@ -60,7 +60,7 @@ export default function AboutPage() {
           <div className="space-y-4 text-text-secondary text-lg leading-relaxed">
             <p>
               We are a full-service custom sign company backed by the world&apos;s largest sign franchise network, with over 700 locations across
-              more than 30 countries. But we are proudly local — founded in 1986, Signarama Vaughan is owned and operated by a team that understands the
+              more than 30 countries. But we are proudly local — founded in 1986, Custom Business Signs Toronto is owned and operated by a team that understands the
               Greater Toronto Area market inside and out. For decades, we have been the trusted signage partner for businesses looking to scale, rebrand, or launch with impact.
             </p>
             <p>
