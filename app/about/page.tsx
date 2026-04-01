@@ -59,8 +59,7 @@ export default function AboutPage() {
           <SectionHeading title="Our Story" align="left" />
           <div className="space-y-4 text-text-secondary text-lg leading-relaxed">
             <p>
-              We are a full-service custom sign company backed by the world&apos;s largest sign franchise network, with over 700 locations across
-              more than 30 countries. But we are proudly local — founded in 1986, Custom Business Signs Toronto is owned and operated by a team that understands the
+              We are a premier independent custom sign company with decades of expertise in large-scale signage and visual branding. Founded in 1986, Custom Business Signs Toronto is a family-owned and operated facility that understands the
               Greater Toronto Area market inside and out. For decades, we have been the trusted signage partner for businesses looking to scale, rebrand, or launch with impact.
             </p>
             <p>
@@ -76,7 +75,7 @@ export default function AboutPage() {
             </p>
             <p>
               We believe every business deserves signage that commands attention, builds unwavering trust, and drives real foot traffic. Whether you
-              need a single storefront sign or a complete national fleet wrap program, we bring the same level of precision, care, and franchise-backed reliability to every project.
+              need a single storefront sign or a complete national fleet wrap program, we bring the same level of precision, care, and industry-leading reliability to every project.
             </p>
           </div>
         </div>
@@ -131,7 +130,7 @@ export default function AboutPage() {
                   Proven Reliability
                 </h3>
                 <p className="text-text-secondary text-sm leading-relaxed pl-13">
-                  Backed by a network of over 700 franchise locations worldwide, and building signs since 1986, you get powerful global resources paired with dedicated, incredibly responsive local service.
+                  With a legacy of building signs since 1986, you get deep industry expertise paired with dedicated, incredibly responsive local service that only an independent manufacturer can provide.
                 </p>
               </div>
 
