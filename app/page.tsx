@@ -55,26 +55,6 @@ export default function HomePage() {
 
       <ClientLogos />
       
-      {/* Stats / Trust Info */}
-      <div className="bg-surface-cream border-y border-surface-light py-8">
-        <div className="container-content">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
-            <div>
-              <p className="font-display text-3xl md:text-4xl text-accent-gold mb-1">Since 1986</p>
-              <p className="text-xs md:text-sm text-text-secondary font-bold uppercase tracking-wider">Serving the GTA</p>
-            </div>
-            <div>
-              <p className="font-display text-3xl md:text-4xl text-accent-gold mb-1">4.9★</p>
-              <p className="text-xs md:text-sm text-text-secondary font-bold uppercase tracking-wider">Google Rating</p>
-            </div>
-            <div>
-              <p className="font-display text-3xl md:text-4xl text-accent-gold mb-1">10,000+</p>
-              <p className="text-xs md:text-sm text-text-secondary font-bold uppercase tracking-wider">Projects Completed</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Services Grid */}
       <section className="section-padding">
         <div className="container-content">
