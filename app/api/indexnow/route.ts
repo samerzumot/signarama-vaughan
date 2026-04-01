@@ -7,7 +7,7 @@ export const dynamic = 'force-dynamic';
 
 export async function GET() {
   const host = "www.custombusinesssigns.ca";
-  const key = "a1b2c3d4e5f67890abcdef1234567890";
+  const key = "7b0f03fb7c4a9ba26b3cd60be3d86ca1";
   const keyLocation = `https://${host}/${key}.txt`;
   
   const staticPaths = [
