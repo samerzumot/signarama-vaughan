@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     template: "%s | Custom Business Signs Toronto",
   },
   description:
-    "Premium custom sign fabrication and installation in Toronto & the GTA. Channel letters, storefront signs, vehicle wraps, and illuminated signage. Call (905) 597-8635.",
+    "Custom sign fabrication & installation in Toronto & the GTA. Channel letters, storefront signs, vehicle wraps & illuminated signage. (905) 597-8635.",
   metadataBase: new URL("https://www.custombusinesssigns.ca"),
   alternates: {
     canonical: "/",
@@ -48,14 +48,14 @@ export const metadata: Metadata = {
     locale: "en_CA",
     siteName: "Custom Business Signs Toronto",
     title: "Custom Business Signs Toronto | Fabrication & Installation",
-    description: "Premium custom sign fabrication and installation in Toronto & the GTA. Channel letters, storefront signs, vehicle wraps, and illuminated signage.",
+    description: "Custom sign fabrication & installation in Toronto & the GTA. Channel letters, storefront signs, vehicle wraps & illuminated signage.",
     url: "https://www.custombusinesssigns.ca",
     images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "Custom Business Signs Toronto" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Custom Business Signs Toronto | Fabrication & Installation",
-    description: "Premium custom sign fabrication and installation in Toronto & the GTA.",
+    description: "Custom sign fabrication & installation in Toronto & the GTA.",
     images: ["/images/og-image.jpg"],
     creator: "@signaramavaughan",
   },

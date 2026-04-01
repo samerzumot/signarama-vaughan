@@ -10,6 +10,11 @@ const serviceLinks = [
   { label: "Pylon Signs", href: "/services/pylon-signs" },
   { label: "Indoor Signs", href: "/services/indoor-signs" },
   { label: "Window Graphics", href: "/services/window-graphics" },
+  { label: "3D Signs & Lettering", href: "/services/3d-signs-lettering" },
+  { label: "Construction Signs", href: "/services/construction-signs" },
+  { label: "Digital Signs", href: "/services/digital-signs" },
+  { label: "Awning Graphics", href: "/services/awning-graphics" },
+  { label: "LED Backlit Signs", href: "/services/led-backlit-signs" },
 ];
 
 export function Footer() {
@@ -44,11 +49,17 @@ export function Footer() {
               <li><Link href="/contact" className="text-white/60 hover:text-white text-sm transition-colors">Contact</Link></li>
               <li><Link href="/sustainability" className="text-white/60 hover:text-white text-sm transition-colors">Sustainability &amp; Standards</Link></li>
               <li><Link href="/sign-permits" className="text-brand-red font-semibold hover:text-brand-red-light text-sm transition-colors">Sign Permit Guides</Link></li>
-              <li className="grid grid-cols-2 gap-x-2 pl-2">
-                <Link href="/sign-permits/vaughan" className="text-white/40 hover:text-white text-xs transition-colors">Vaughan</Link>
+              <li className="grid grid-cols-2 gap-x-2 gap-y-1 pl-2">
                 <Link href="/sign-permits/toronto" className="text-white/40 hover:text-white text-xs transition-colors">Toronto</Link>
+                <Link href="/sign-permits/vaughan" className="text-white/40 hover:text-white text-xs transition-colors">Vaughan</Link>
                 <Link href="/sign-permits/mississauga" className="text-white/40 hover:text-white text-xs transition-colors">Mississauga</Link>
                 <Link href="/sign-permits/brampton" className="text-white/40 hover:text-white text-xs transition-colors">Brampton</Link>
+                <Link href="/sign-permits/markham" className="text-white/40 hover:text-white text-xs transition-colors">Markham</Link>
+                <Link href="/sign-permits/richmond-hill" className="text-white/40 hover:text-white text-xs transition-colors">Richmond Hill</Link>
+                <Link href="/sign-permits/oakville" className="text-white/40 hover:text-white text-xs transition-colors">Oakville</Link>
+                <Link href="/sign-permits/burlington" className="text-white/40 hover:text-white text-xs transition-colors">Burlington</Link>
+                <Link href="/sign-permits/ajax" className="text-white/40 hover:text-white text-xs transition-colors">Ajax</Link>
+                <Link href="/sign-permits/pickering" className="text-white/40 hover:text-white text-xs transition-colors">Pickering</Link>
               </li>
               <li>
                 <a href="https://signarama.ca/on-vaughan" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white text-sm transition-colors">

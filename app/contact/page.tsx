@@ -4,7 +4,7 @@ import { PHONE_NUMBER, PHONE_HREF } from "../lib/gtag";
 import { PhoneLink } from "../components/PhoneLink";
 
 export const metadata = createMetadata({
-  title: "Contact Us | Get a Free Sign Quote",
+  title: "Contact Us | Free Sign Quote",
   description: "Contact us for a free custom sign quote. Call (905) 597-8635 or visit our showroom at 7250 Keele St, Vaughan.",
   path: "/contact",
 });

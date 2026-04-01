@@ -2,7 +2,7 @@ import { SectionHeading } from "../components/SectionHeading";
 import { createMetadata } from "../lib/metadata";
 
 export const metadata = createMetadata({
-    title: "Terms of Service | GTA Sign Company",
+    title: "Terms of Service",
     description: "Terms of Service for our custom sign fabrication and installation services.",
     path: "/terms-of-service",
 });

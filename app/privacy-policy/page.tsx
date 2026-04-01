@@ -2,7 +2,7 @@ import { SectionHeading } from "../components/SectionHeading";
 import { createMetadata } from "../lib/metadata";
 
 export const metadata = createMetadata({
-    title: "Privacy Policy | GTA Sign Company",
+    title: "Privacy Policy",
     description: "Privacy Policy for our custom sign fabrication and installation services.",
     path: "/privacy-policy",
 });

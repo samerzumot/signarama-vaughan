@@ -6,8 +6,8 @@ import { createMetadata } from "../lib/metadata";
 import { permits } from "../lib/permits";
 
 export const metadata = createMetadata({
-  title: "Complete Sign Permit Guide for GTA Businesses (2026) | Custom Business Signs Toronto",
-  description: "Navigate sign permits across the GTA effortlessly. Compare 2026 requirements, fees, and timelines for Toronto, Vaughan, Mississauga, and beyond.",
+  title: "GTA Sign Permit Guide (2026)",
+  description: "Navigate sign permits across the GTA. Compare 2026 requirements, fees, and timelines for Toronto, Vaughan, Mississauga, and beyond.",
   path: "/sign-permits",
 });
 

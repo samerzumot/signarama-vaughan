@@ -3,7 +3,7 @@ import { createMetadata } from "../lib/metadata";
 import { getServiceBySlug } from "../lib/services";
 
 export const metadata = createMetadata({
-  title: "Vehicle Wraps & Fleet Graphics",
+  title: "Vehicle Wraps & Graphics",
   description: "Professional vehicle wraps & fleet graphics. Full & partial wraps, premium 3M vinyl. Free quote: (905) 597-8635.",
   path: "/vehicle-wraps",
 });

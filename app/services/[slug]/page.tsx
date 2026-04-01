@@ -21,8 +21,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const service = getServiceBySlug(slug);
   if (!service) return {};
   return createMetadata({
-    title: `${service.title} | Custom ${service.title} for Your Business`,
-    description: `Custom ${service.title.toLowerCase()} in Vaughan & the GTA. ${service.shortDescription} Professional design, fabrication & installation. Free quote: (905) 597-8635.`,
+    title: `${service.title}`,
+    description: `Custom ${service.title.toLowerCase()} in the GTA. ${service.shortDescription} Free quote: (905) 597-8635.`,
     path: `/services/${slug}`,
   });
 }

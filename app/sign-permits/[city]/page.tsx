@@ -16,8 +16,8 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
   if (!permit) return {};
   
   return createMetadata({
-    title: `${permit.city} Sign Permits & Bylaws (2026 Guide) | Custom Business Signs Toronto`,
-    description: `Complete guide to ${permit.city} sign permit fees, requirements, and application processing times for 2026. Avoid bylaw fines and application denials.`,
+    title: `${permit.city} Sign Permits (2026)`,
+    description: `${permit.city} sign permit fees, requirements & timelines for 2026. Avoid bylaw fines and application denials with our expert guide.`,
     path: `/sign-permits/${permit.slug}`,
   });
 }
