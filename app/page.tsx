@@ -34,12 +34,22 @@ export default function HomePage() {
         {/* Bottom: tagline + CTAs */}
         <div className="relative z-10 container-content text-center py-12 md:py-16 flex flex-col items-center justify-center">
           <h1 className="font-display text-display-lg text-text-primary mb-2 md:mb-4 animate-fade-in text-balance">
-            Custom Sign Fabrication &amp; Installation in the GTA
+            GTA&apos;s Most Trusted Signage Experts Since 1986
           </h1>
           <p className="text-text-primary text-lg md:text-xl font-semibold mb-6 md:mb-8 animate-fade-in max-w-3xl mx-auto">
-            Expertly crafted signage solutions for businesses of all sizes since 1986
+            Custom sign fabrication and installation for businesses across the GTA
           </p>
           <HeroActions />
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm font-medium text-text-secondary animate-fade-in [animation-delay:600ms]">
+            <span className="flex items-center gap-1">
+              <span className="text-accent-gold font-bold text-base">★★★★★</span> 
+              Top-Rated on Google
+            </span>
+            <span className="hidden md:block text-surface-light">|</span>
+            <span>Craftsmanship Warranty</span>
+            <span className="hidden md:block text-surface-light">|</span>
+            <span>Locally Owned &amp; Operated</span>
+          </div>
         </div>
       </section>
 
@@ -48,14 +58,10 @@ export default function HomePage() {
       {/* Stats / Trust Info */}
       <div className="bg-surface-cream border-y border-surface-light py-8">
         <div className="container-content">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
             <div>
               <p className="font-display text-3xl md:text-4xl text-accent-gold mb-1">Since 1986</p>
               <p className="text-xs md:text-sm text-text-secondary font-bold uppercase tracking-wider">Serving the GTA</p>
-            </div>
-            <div>
-              <p className="font-display text-3xl md:text-4xl text-accent-gold mb-1">700+</p>
-              <p className="text-xs md:text-sm text-text-secondary font-bold uppercase tracking-wider">Locations Worldwide</p>
             </div>
             <div>
               <p className="font-display text-3xl md:text-4xl text-accent-gold mb-1">4.9★</p>

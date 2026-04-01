@@ -10,7 +10,7 @@ export function HeroActions() {
         onClick={() => window.dispatchEvent(new CustomEvent("open-quote-modal"))}
         className="btn-primary text-lg px-10 py-5"
       >
-        Get a Free Quote
+        Get My Free Sign Quote
       </button>
       <PhoneLink className="btn-outline text-lg px-10 py-5">
         Call {PHONE_NUMBER}

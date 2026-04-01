@@ -200,7 +200,7 @@ export function QuoteForm({
           disabled={submitting}
           className="btn-primary w-full disabled:opacity-60"
         >
-          {submitting ? "Sending..." : "Get My Free Quote"}
+          {submitting ? "Sending..." : "Get My Free Sign Quote"}
         </button>
         <p className="text-text-muted text-xs text-center">We respond within 24 hours. Your info is never shared.</p>
       </form>
