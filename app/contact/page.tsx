@@ -21,11 +21,47 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* Objection-handling FAQ */}
+      <section className="py-12 border-b border-surface-light bg-white">
+        <div className="container-content max-w-3xl mx-auto">
+          <h2 className="font-display text-display-sm text-center mb-8">What to Expect</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="rounded-card border border-surface-light p-5 text-center">
+              <div className="w-10 h-10 bg-brand-red/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg className="w-5 h-5 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="font-display text-base mb-1">We respond within 24 hours</h3>
+              <p className="text-text-secondary text-sm">Usually same business day. No long waits.</p>
+            </div>
+            <div className="rounded-card border border-surface-light p-5 text-center">
+              <div className="w-10 h-10 bg-brand-red/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg className="w-5 h-5 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="font-display text-base mb-1">Quotes are 100% free</h3>
+              <p className="text-text-secondary text-sm">No obligation. No pressure. Just expert advice.</p>
+            </div>
+            <div className="rounded-card border border-surface-light p-5 text-center">
+              <div className="w-10 h-10 bg-brand-red/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg className="w-5 h-5 text-brand-red" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                </svg>
+              </div>
+              <h3 className="font-display text-base mb-1">We handle everything</h3>
+              <p className="text-text-secondary text-sm">Design, permits, fabrication, and installation.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section-padding">
         <div className="container-content">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-content mx-auto">
             <div>
-              <QuoteForm heading="Request a Free Quote" />
+              <QuoteForm heading="Start Your Free Estimate" />
             </div>
             <div className="space-y-8">
               <div>
