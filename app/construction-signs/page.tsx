@@ -3,7 +3,7 @@ import { createMetadata } from "../lib/metadata";
 import { getServiceBySlug } from "../lib/services";
 
 export const metadata = createMetadata({
-  title: "Construction & Development Signs",
+  title: "Construction Signs",
   description: "Construction signs, hoarding graphics & site signage. Durable materials, fast turnaround. Free quote: (905) 597-8635.",
   path: "/construction-signs",
 });

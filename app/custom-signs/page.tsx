@@ -3,7 +3,7 @@ import { createMetadata } from "../lib/metadata";
 import { services } from "../lib/services";
 
 export const metadata = createMetadata({
-  title: "Custom Signs in Vaughan & the GTA",
+  title: "Custom Signs & Graphics",
   description: "Custom signs & signage in Vaughan. Channel letters, storefront signs, vehicle wraps & more. Full-service design, fabrication & install. Call (905) 597-8635.",
   path: "/custom-signs",
   canonical: "https://www.custombusinesssigns.ca/services",

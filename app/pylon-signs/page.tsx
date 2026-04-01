@@ -3,7 +3,7 @@ import { createMetadata } from "../lib/metadata";
 import { getServiceBySlug } from "../lib/services";
 
 export const metadata = createMetadata({
-  title: "Pylon & Monument Signs in the GTA",
+  title: "Pylon & Monument Signs",
   description: "Custom pylon & monument signs in the GTA. Freestanding signs for maximum road visibility. Free quote: (905) 597-8635.",
   path: "/pylon-signs",
 });

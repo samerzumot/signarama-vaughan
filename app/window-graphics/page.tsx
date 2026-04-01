@@ -3,7 +3,7 @@ import { createMetadata } from "../lib/metadata";
 import { getServiceBySlug } from "../lib/services";
 
 export const metadata = createMetadata({
-  title: "Custom Window Graphics & Vinyl",
+  title: "Custom Window Graphics",
   description: "Custom window graphics, vinyl lettering & frosted film. Privacy & promotional solutions. Free quote: (905) 597-8635.",
   path: "/window-graphics",
   canonical: "https://www.custombusinesssigns.ca/services/window-graphics",

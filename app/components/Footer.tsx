@@ -44,6 +44,12 @@ export function Footer() {
               <li><Link href="/contact" className="text-white/60 hover:text-white text-sm transition-colors">Contact</Link></li>
               <li><Link href="/sustainability" className="text-white/60 hover:text-white text-sm transition-colors">Sustainability &amp; Standards</Link></li>
               <li><Link href="/sign-permits" className="text-brand-red font-semibold hover:text-brand-red-light text-sm transition-colors">Sign Permit Guides</Link></li>
+              <li className="grid grid-cols-2 gap-x-2 pl-2">
+                <Link href="/sign-permits/vaughan" className="text-white/40 hover:text-white text-xs transition-colors">Vaughan</Link>
+                <Link href="/sign-permits/toronto" className="text-white/40 hover:text-white text-xs transition-colors">Toronto</Link>
+                <Link href="/sign-permits/mississauga" className="text-white/40 hover:text-white text-xs transition-colors">Mississauga</Link>
+                <Link href="/sign-permits/brampton" className="text-white/40 hover:text-white text-xs transition-colors">Brampton</Link>
+              </li>
               <li>
                 <a href="https://signarama.ca/on-vaughan" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white text-sm transition-colors">
                   Corporate Profile

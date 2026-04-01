@@ -3,7 +3,7 @@ import { createMetadata } from "../lib/metadata";
 import { getServiceBySlug } from "../lib/services";
 
 export const metadata = createMetadata({
-  title: "Custom Channel Letters & the GTA",
+  title: "Custom Channel Letters",
   description: "Professional channel letter signs for your business. LED illuminated, front-lit & halo-lit options. Design, fabrication & install. Free quote: (905) 597-8635.",
   path: "/channel-letters",
 });

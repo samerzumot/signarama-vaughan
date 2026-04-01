@@ -34,11 +34,11 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Custom Sign Fabrication & Installation | GTA Sign Company",
-    template: "%s | Sign Fabrication & Installation",
+    default: "Custom Business Signs Toronto | Fabrication & Installation",
+    template: "%s | Custom Business Signs Toronto",
   },
   description:
-    "We design, fabricate, and install custom signs for businesses across the GTA. Channel letters, storefront signs, vehicle wraps & more. Call (905) 597-8635.",
+    "Premium custom sign fabrication and installation in Toronto & the GTA. Channel letters, storefront signs, vehicle wraps, and illuminated signage. Call (905) 597-8635.",
   metadataBase: new URL("https://www.custombusinesssigns.ca"),
   alternates: {
     canonical: "/",
@@ -47,81 +47,66 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_CA",
     siteName: "Custom Business Signs Toronto",
-    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630 }],
+    title: "Custom Business Signs Toronto | Fabrication & Installation",
+    description: "Premium custom sign fabrication and installation in Toronto & the GTA. Channel letters, storefront signs, vehicle wraps, and illuminated signage.",
+    url: "https://www.custombusinesssigns.ca",
+    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "Custom Business Signs Toronto" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Custom Business Signs Toronto | Fabrication & Installation",
+    description: "Premium custom sign fabrication and installation in Toronto & the GTA.",
+    images: ["/images/og-image.jpg"],
+    creator: "@signaramavaughan",
   },
   robots: { index: true, follow: true },
 };
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "Organization"],
-  name: "Custom Business Signs Toronto",
-  description: "Custom signs and signage for businesses in the Greater Toronto Area",
-  url: "https://www.custombusinesssigns.ca",
-  logo: "https://www.custombusinesssigns.ca/images/og-image.jpg",
-  image: "https://www.custombusinesssigns.ca/images/og-image.jpg",
-  foundingDate: "1986",
-  telephone: "+19055978635",
-  email: "info@signarama-vaughan.com",
-  sameAs: [
+  "@type": "LocalBusiness",
+  "name": "Custom Business Signs Toronto",
+  "description": "Custom signs and signage for businesses in the Greater Toronto Area",
+  "url": "https://www.custombusinesssigns.ca",
+  "logo": "https://www.custombusinesssigns.ca/images/og-image.jpg",
+  "image": "https://www.custombusinesssigns.ca/images/og-image.jpg",
+  "telephone": "+19055978635",
+  "email": "info@signarama-vaughan.com",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "7250 Keele St, Unit 286",
+    "addressLocality": "Vaughan",
+    "addressRegion": "ON",
+    "postalCode": "L4K 1Z8",
+    "addressCountry": "CA"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 43.7872132,
+    "longitude": -79.4975323
+  },
+  "areaServed": "Greater Toronto Area",
+  "openingHours": "Mo-Fr 09:00-17:00",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "bestRating": "5",
+    "worstRating": "1",
+    "reviewCount": "125"
+  },
+  "sameAs": [
     "https://www.facebook.com/signaramavaughan",
     "https://www.instagram.com/signaramavaughan",
     "https://www.linkedin.com/company/signarama-vaughan"
-  ],
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "7250 Keele St, Unit 286",
-    addressLocality: "Vaughan",
-    addressRegion: "ON",
-    postalCode: "L4K 1Z8",
-    addressCountry: "CA",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 43.7872132,
-    longitude: -79.4975323,
-  },
-  areaServed: "Greater Toronto Area",
-  openingHours: "Mo-Fr 09:00-17:00",
-  priceRange: "$$",
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "125"
-  },
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Signage Services",
-    itemListElement: [
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Channel Letters" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Storefront Signs" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vehicle Wraps & Graphics" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Illuminated Signs" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Pylon Signs" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Indoor Signs" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "3D Signs & Lettering" } }
-    ]
-  },
-  knowsAbout: [
-    "Sign Fabrication",
-    "Channel Letters",
-    "Vehicle Wraps",
-    "Illuminated Signs",
-    "Sign Installation",
-    "Graphic Design"
   ]
 };
 
 const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  url: "https://www.custombusinesssigns.ca",
-  name: "Custom Business Signs Toronto",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: "https://www.custombusinesssigns.ca/search?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
+  "url": "https://www.custombusinesssigns.ca",
+  "name": "Custom Business Signs Toronto"
 };
 
 export default function RootLayout({

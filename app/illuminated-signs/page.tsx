@@ -3,7 +3,7 @@ import { createMetadata } from "../lib/metadata";
 import { getServiceBySlug } from "../lib/services";
 
 export const metadata = createMetadata({
-  title: "Illuminated Signs & Light Boxes",
+  title: "Illuminated Signs",
   description: "Custom illuminated signs & light boxes. LED channel letters, backlit signs & more. Free quote: (905) 597-8635.",
   path: "/illuminated-signs",
 });
