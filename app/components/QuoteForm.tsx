@@ -42,6 +42,20 @@ export function QuoteForm({
   function handleStep1(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStep(2);
+
+    // Fire-and-forget partial lead capture
+    const partialData = new FormData();
+    partialData.set("submission_type", "partial");
+    partialData.set("name", name);
+    partialData.set("email", email);
+    partialData.set("phone", phone);
+
+    fetch("/api/quote", {
+      method: "POST",
+      body: partialData,
+    }).catch(() => {
+      // Sliently fail for background capture
+    });
   }
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -183,6 +197,12 @@ export function QuoteForm({
             type="text"
             name="business_name"
             placeholder="Business Name"
+            className={inputClass}
+          />
+          <input
+            type="text"
+            name="business_address"
+            placeholder="Business Address"
             className={inputClass}
           />
           <select
