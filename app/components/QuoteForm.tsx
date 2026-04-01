@@ -24,14 +24,24 @@ export function QuoteForm({
   const [sitePhotoNames, setSitePhotoNames] = useState<string[]>([]);
   const [selectedService, setSelectedService] = useState(preselectedService || "");
 
-  // Step 1 fields stored in state so they persist across steps
+  // Step 1 fields
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
 
+  // Refs for abandonment tracking (avoids stale closures in event listeners)
+  const leadDataRef = useRef({ name: "", email: "", phone: "" });
+  const isSubmittedRef = useRef(false);
+  const isPartialSentRef = useRef(false);
+  
   const fileInputRef = useRef<HTMLInputElement>(null);
   const sitePhotoRef = useRef<HTMLInputElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
+
+  // Sync state to refs
+  useEffect(() => {
+    leadDataRef.current = { name, email, phone };
+  }, [name, email, phone]);
 
   useEffect(() => {
     if (preselectedService) {
@@ -39,32 +49,68 @@ export function QuoteForm({
     }
   }, [preselectedService]);
 
-  function handleStep1(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setStep(2);
+  const sendPartialLead = () => {
+    // Only send if we have at least an email or phone, haven't already sent, and haven't finished full form
+    if (isSubmittedRef.current || isPartialSentRef.current) return;
+    if (!leadDataRef.current.email && !leadDataRef.current.phone) return;
 
-    // Fire-and-forget partial lead capture
+    isPartialSentRef.current = true;
     const partialData = new FormData();
     partialData.set("submission_type", "partial");
-    partialData.set("name", name);
-    partialData.set("email", email);
-    partialData.set("phone", phone);
+    partialData.set("name", leadDataRef.current.name);
+    partialData.set("email", leadDataRef.current.email);
+    partialData.set("phone", leadDataRef.current.phone);
 
+    // use keepalive: true to ensure the request completes even if the page is closing
     fetch("/api/quote", {
       method: "POST",
       body: partialData,
+      keepalive: true,
     }).catch(() => {
       // Sliently fail for background capture
     });
+  };
+
+  // Abandonment & Exit Listeners
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "hidden") {
+        sendPartialLead();
+      }
+    };
+
+    const handleBeforeUnload = () => {
+      sendPartialLead();
+    };
+
+    // Idle timer: If they entered data but didn't finish within 3 minutes, fire the lead anyway
+    const idleTimer = setTimeout(() => {
+      sendPartialLead();
+    }, 180000); // 3 minutes
+
+    window.addEventListener("visibilitychange", handleVisibilityChange);
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener("visibilitychange", handleVisibilityChange);
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+      clearTimeout(idleTimer);
+    };
+  }, []);
+
+  function handleStep1(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStep(2);
+    // Note: Immediate capture removed. We now rely on the exit/idle triggers.
   }
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setSubmitting(true);
+    isSubmittedRef.current = true; // Block any further partial leads
 
     const form = e.currentTarget;
     const formData = new FormData(form);
-    // Inject step 1 fields since they're in state, not in the step-2 form
     formData.set("name", name);
     formData.set("email", email);
     formData.set("phone", phone);
@@ -104,7 +150,7 @@ export function QuoteForm({
     const names: string[] = [];
     for (let i = 0; i < files.length; i++) names.push(files[i].name);
     if (getTotalFileSize() > 10 * 1024 * 1024) {
-      alert("Total file size exceeds 10MB limit. Please reduce file size or quantity.");
+      alert("Total file size exceeds 10MB limit (max 10MB total).");
       if (fileInputRef.current) fileInputRef.current.value = "";
       setFileNames([]);
       return;
@@ -118,7 +164,7 @@ export function QuoteForm({
     const names: string[] = [];
     for (let i = 0; i < files.length; i++) names.push(files[i].name);
     if (getTotalFileSize() > 10 * 1024 * 1024) {
-      alert("Total file size exceeds 10MB limit. Please reduce file size or quantity.");
+      alert("Total file size exceeds 10MB limit (max 10MB total).");
       if (sitePhotoRef.current) sitePhotoRef.current.value = "";
       setSitePhotoNames([]);
       return;
@@ -137,7 +183,6 @@ export function QuoteForm({
         </h2>
       )}
 
-      {/* Step indicator */}
       <div className="flex items-center justify-center gap-2 mb-6">
         <div className={`flex items-center justify-center w-7 h-7 rounded-full text-sm font-bold transition-colors ${step >= 1 ? "bg-brand-red text-white" : "bg-surface-light text-text-muted"}`}>
           1
@@ -148,7 +193,6 @@ export function QuoteForm({
         </div>
       </div>
 
-      {/* Step 1: Contact Info */}
       {step === 1 && (
         <form onSubmit={handleStep1} className="space-y-4">
           <p className="text-text-secondary text-sm text-center mb-4">
@@ -186,7 +230,6 @@ export function QuoteForm({
         </form>
       )}
 
-      {/* Step 2: Project Details */}
       {step === 2 && (
         <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
           <p className="text-text-secondary text-sm text-center mb-4">
@@ -226,7 +269,6 @@ export function QuoteForm({
             className={`${inputClass} resize-none`}
           />
 
-          {/* Design Upload */}
           <div className="border-2 border-dashed border-surface-light rounded-card p-4 text-center hover:border-brand-red/30 transition-colors">
             <label className="cursor-pointer block">
               <div className="flex flex-col items-center gap-2">
@@ -255,7 +297,6 @@ export function QuoteForm({
             )}
           </div>
 
-          {/* Site Photo Upload */}
           <div className="border-2 border-dashed border-surface-light rounded-card p-4 text-center hover:border-brand-red/30 transition-colors">
             <label className="cursor-pointer block">
               <div className="flex flex-col items-center gap-2">

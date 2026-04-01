@@ -54,7 +54,7 @@ export async function POST(request: NextRequest) {
     `;
 
         const subject = isPartial 
-            ? `[RECOVERY] Partial Lead: ${name}`
+            ? `[ABANDONED LEAD] Partial Lead: ${name}`
             : `New Quote Request from ${name}`;
 
         const { error } = await getResend().emails.send({
