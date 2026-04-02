@@ -73,28 +73,26 @@ export function QuoteForm({
 
   // Abandonment & Exit Listeners
   useEffect(() => {
-    const handleVisibilityChange = () => {
-      if (document.visibilityState === "hidden") {
-        sendPartialLead();
-      }
-    };
-
     const handleBeforeUnload = () => {
       sendPartialLead();
     };
 
-    // Idle timer: If they entered data but didn't finish within 3 minutes, fire the lead anyway
+    // Idle timer: If they entered data but didn't finish within 10 minutes, fire the lead anyway.
+    // Increased from 3 to 10 mins because users may take time to gather project info/images.
     const idleTimer = setTimeout(() => {
       sendPartialLead();
-    }, 180000); // 3 minutes
+    }, 600000); // 10 minutes
 
-    window.addEventListener("visibilitychange", handleVisibilityChange);
     window.addEventListener("beforeunload", handleBeforeUnload);
 
     return () => {
-      window.removeEventListener("visibilitychange", handleVisibilityChange);
       window.removeEventListener("beforeunload", handleBeforeUnload);
       clearTimeout(idleTimer);
+
+      // If the component unmounts (e.g. modal closed, or menu closed) 
+      // without being submitted, we trigger the lead here. 
+      // isSubmittedRef.current blocks this if they actually succeeded.
+      sendPartialLead();
     };
   }, []);
 
