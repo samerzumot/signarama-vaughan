@@ -214,7 +214,8 @@ export function QuoteForm({
           />
           <input
             type="tel"
-            placeholder="Phone Number (optional)"
+            required
+            placeholder="Phone Number *"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             className={inputClass}
