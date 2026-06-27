@@ -24,16 +24,16 @@ export async function POST(request: NextRequest) {
         const signType = formData.get("sign_type") as string;
         const message = formData.get("message") as string;
 
-        // Format phone number as (XXX) - XXX XXXX
+        // Format phone number as (XXX) XXX - XXXX
         const formatPhone = (p: string) => {
             const digits = p.replace(/\D/g, "");
             if (digits.length === 10) {
-                return `(${digits.slice(0, 3)}) - ${digits.slice(3, 6)} ${digits.slice(6)}`;
+                return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)} - ${digits.slice(6)}`;
             }
             if (digits.length === 11 && digits[0] === "1") {
-                return `(${digits.slice(1, 4)}) - ${digits.slice(4, 7)} ${digits.slice(7)}`;
+                return `(${digits.slice(1, 4)}) ${digits.slice(4, 7)} - ${digits.slice(7)}`;
             }
-            return p; // return original if unrecognized format
+            return p;
         };
 
         const formattedPhone = phone ? formatPhone(phone) : null;
