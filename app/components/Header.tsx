@@ -4,8 +4,9 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { PHONE_NUMBER, PHONE_HREF, reportConversion } from "../lib/gtag";
+import { PHONE_NUMBER, PHONE_HREF, WHATSAPP_HREF, reportConversion, reportWhatsAppClick } from "../lib/gtag";
 import { services } from "../lib/services";
+import { WhatsAppIcon } from "./WhatsAppButton";
 
 export function Header({ variant = "full" }: { variant?: "full" | "landing" }) {
   const [scrolled, setScrolled] = useState(false);
@@ -95,10 +96,22 @@ export function Header({ variant = "full" }: { variant?: "full" | "landing" }) {
             </nav>
 
             {/* Desktop Right — phone + quote */}
-            <div className="hidden lg:flex items-center gap-5">
+            <div className="hidden lg:flex items-center gap-4">
               <a href={PHONE_HREF} onClick={() => reportConversion()} className="flex items-center gap-2 text-brand-red font-bold text-lg hover:opacity-80 transition-opacity">
                 <PhoneIcon />
                 {PHONE_NUMBER}
+              </a>
+              <a
+                href={WHATSAPP_HREF}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => reportWhatsAppClick()}
+                className="flex items-center gap-1.5 text-text-primary hover:text-[#25D366] font-semibold text-sm transition-colors py-1.5 px-3 rounded-full border border-surface-light hover:border-[#25D366]/40 hover:bg-[#25D366]/5"
+                title={`Chat with us on WhatsApp (${PHONE_NUMBER})`}
+                aria-label={`Chat on WhatsApp at ${PHONE_NUMBER}`}
+              >
+                <WhatsAppIcon className="w-4 h-4 text-[#25D366]" />
+                <span>WhatsApp</span>
               </a>
               <button
                 onClick={() => window.dispatchEvent(new CustomEvent("open-quote-modal", { detail: { signType: getCurrentServiceTitle() } }))}
@@ -112,10 +125,22 @@ export function Header({ variant = "full" }: { variant?: "full" | "landing" }) {
 
         {/* Landing variant: phone on desktop */}
         {variant === "landing" && (
-          <div className="hidden lg:flex items-center gap-5">
+          <div className="hidden lg:flex items-center gap-4">
             <a href={PHONE_HREF} onClick={() => reportConversion()} className="flex items-center gap-2 text-brand-red font-bold text-xl hover:opacity-80 transition-opacity">
               <PhoneIcon />
               {PHONE_NUMBER}
+            </a>
+            <a
+              href={WHATSAPP_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => reportWhatsAppClick()}
+              className="flex items-center gap-1.5 text-text-primary hover:text-[#25D366] font-semibold text-sm transition-colors py-1.5 px-3 rounded-full border border-surface-light hover:border-[#25D366]/40 hover:bg-[#25D366]/5"
+              title={`Chat with us on WhatsApp (${PHONE_NUMBER})`}
+              aria-label={`Chat on WhatsApp at ${PHONE_NUMBER}`}
+            >
+              <WhatsAppIcon className="w-4 h-4 text-[#25D366]" />
+              <span>WhatsApp</span>
             </a>
             <button
               onClick={() => {
@@ -130,9 +155,19 @@ export function Header({ variant = "full" }: { variant?: "full" | "landing" }) {
         )}
 
         {/* Mobile right side */}
-        <div className="flex lg:hidden items-center gap-2">
+        <div className="flex lg:hidden items-center gap-1">
           <a href={PHONE_HREF} onClick={() => reportConversion()} className="text-brand-red p-2" aria-label="Call us">
             <PhoneIcon />
+          </a>
+          <a
+            href={WHATSAPP_HREF}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => reportWhatsAppClick()}
+            className="text-[#25D366] p-2 hover:opacity-80 transition-opacity"
+            aria-label="Chat on WhatsApp"
+          >
+            <WhatsAppIcon className="w-5 h-5 fill-current" />
           </a>
           {variant === "full" && (
             <button
@@ -221,10 +256,24 @@ export function Header({ variant = "full" }: { variant?: "full" | "landing" }) {
             <a
               href={PHONE_HREF}
               onClick={() => reportConversion()}
-              className="flex items-center justify-center gap-2 text-brand-red font-bold text-xl py-3"
+              className="flex items-center justify-center gap-2 text-brand-red font-bold text-xl py-2"
             >
               <PhoneIcon />
               {PHONE_NUMBER}
+            </a>
+            <a
+              href={WHATSAPP_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => {
+                setMenuOpen(false);
+                reportWhatsAppClick();
+              }}
+              className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold py-3.5 rounded-button text-base transition-colors shadow-sm"
+              aria-label="Chat on WhatsApp"
+            >
+              <WhatsAppIcon className="w-5 h-5 fill-current" />
+              Chat on WhatsApp
             </a>
             <button
               onClick={() => {

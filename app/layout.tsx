@@ -6,6 +6,7 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { MobileCTABar } from "./components/MobileCTABar";
 import { QuoteModal } from "./components/QuoteModal";
+import { WhatsAppButton } from "./components/WhatsAppButton";
 
 const dmSerifDisplay = DM_Serif_Display({
   weight: "400",
@@ -153,6 +154,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <Footer />
         <MobileCTABar />
         <QuoteModal />
+        <WhatsAppButton />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=GT-5R8M6V4M"
           strategy="lazyOnload"

@@ -2,6 +2,7 @@ import { QuoteForm } from "../components/QuoteForm";
 import { createMetadata } from "../lib/metadata";
 import { PHONE_NUMBER, PHONE_HREF } from "../lib/gtag";
 import { PhoneLink } from "../components/PhoneLink";
+import { WhatsAppIcon, WhatsAppLink } from "../components/WhatsAppButton";
 
 export const metadata = createMetadata({
   title: "Contact Us | Free Sign Quote",
@@ -73,6 +74,13 @@ export default function ContactPage() {
                     </svg>
                     {PHONE_NUMBER}
                   </PhoneLink>
+                  <WhatsAppLink
+                    className="flex items-center gap-3 text-[#25D366] hover:text-[#20ba59] font-bold text-xl hover:opacity-80 transition-opacity"
+                    ariaLabel={`Message us on WhatsApp at ${PHONE_NUMBER}`}
+                  >
+                    <WhatsAppIcon className="w-6 h-6 fill-current" />
+                    WhatsApp: {PHONE_NUMBER}
+                  </WhatsAppLink>
                   <p className="flex items-center gap-3 text-text-secondary">
                     <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />

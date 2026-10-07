@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { PHONE_NUMBER, PHONE_HREF } from "../lib/gtag";
+import { PHONE_NUMBER, PHONE_HREF, WHATSAPP_DISPLAY } from "../lib/gtag";
 import { PhoneLink } from "./PhoneLink";
+import { WhatsAppIcon, WhatsAppLink } from "./WhatsAppButton";
 
 const serviceLinks = [
   { label: "Channel Letters", href: "/services/channel-letters" },
@@ -90,6 +91,10 @@ export function Footer() {
             <h3 className="font-display text-lg mb-4 text-white">Contact</h3>
             <div className="space-y-3 text-sm">
               <PhoneLink className="flex items-center gap-2 text-white font-bold text-lg hover:text-brand-red transition-colors" />
+              <WhatsAppLink className="flex items-center gap-2 text-white/90 hover:text-[#25D366] font-medium transition-colors">
+                <WhatsAppIcon className="w-4 h-4 text-[#25D366]" />
+                <span>WhatsApp: {WHATSAPP_DISPLAY}</span>
+              </WhatsAppLink>
               <Link href="/contact" className="text-white/60 hover:text-white transition-colors block">
                 Request a Quote →
               </Link>
