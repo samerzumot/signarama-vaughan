@@ -66,6 +66,7 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "https://www.custombusinesssigns.ca/#localbusiness",
   "name": "Custom Business Signs Toronto",
   "description": "Custom signs and signage for businesses in the Greater Toronto Area",
   "url": "https://www.custombusinesssigns.ca",
@@ -74,6 +75,9 @@ const localBusinessSchema = {
   "telephone": "+19055978635",
   "email": "info@signarama-vaughan.com",
   "priceRange": "$$",
+  "currenciesAccepted": "CAD",
+  "paymentAccepted": "Cash, Credit Card, Cheque, Wire Transfer",
+  "hasMap": "https://maps.app.goo.gl/EZ5P5ZyPXogjFGTT9",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "7250 Keele St, Unit 286",
@@ -99,15 +103,20 @@ const localBusinessSchema = {
   "sameAs": [
     "https://www.facebook.com/signaramavaughan",
     "https://www.instagram.com/signaramavaughan",
-    "https://www.linkedin.com/company/signarama-vaughan"
+    "https://www.linkedin.com/company/signarama-vaughan",
+    "https://maps.app.goo.gl/EZ5P5ZyPXogjFGTT9"
   ]
 };
 
 const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": "https://www.custombusinesssigns.ca/#website",
   "url": "https://www.custombusinesssigns.ca",
-  "name": "Custom Business Signs Toronto"
+  "name": "Custom Business Signs Toronto",
+  "publisher": {
+    "@id": "https://www.custombusinesssigns.ca/#localbusiness"
+  }
 };
 
 export default function RootLayout({

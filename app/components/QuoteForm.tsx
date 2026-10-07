@@ -122,6 +122,13 @@ export function QuoteForm({
       // Continue even on fetch error so the user isn't stuck
     } finally {
       setSubmitting(false);
+      if (typeof window !== "undefined") {
+        try {
+          sessionStorage.setItem("cbs_lead_submitted", "true");
+        } catch {
+          // Ignore quota/private browsing errors
+        }
+      }
       if (onSubmitSuccess) {
         onSubmitSuccess();
       }

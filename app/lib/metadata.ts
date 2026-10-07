@@ -25,7 +25,7 @@ export function createMetadata({
       title,
       description,
       url,
-      siteName: "Sign Fabrication & Installation Contractors",
+      siteName: "Custom Business Signs Toronto",
       images: [{ url: fullImage, width: 1200, height: 630 }],
       locale: "en_CA",
       type: "website",

@@ -6,10 +6,12 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
+        disallow: '/thank-you',
       },
       {
         userAgent: ['GPTBot', 'ChatGPT-User', 'Claude-Web', 'PerplexityBot', 'Google-Extended'],
         allow: '/',
+        disallow: '/thank-you',
       },
     ],
     sitemap: 'https://www.custombusinesssigns.ca/sitemap.xml',

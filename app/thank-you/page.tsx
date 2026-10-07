@@ -6,7 +6,17 @@ import { reportConversion, PHONE_NUMBER, PHONE_HREF } from "../lib/gtag";
 
 export default function ThankYouPage() {
     useEffect(() => {
-        reportConversion();
+        if (typeof window !== "undefined") {
+            try {
+                const hasReported = sessionStorage.getItem("cbs_conversion_reported");
+                if (!hasReported) {
+                    reportConversion();
+                    sessionStorage.setItem("cbs_conversion_reported", "true");
+                }
+            } catch {
+                reportConversion();
+            }
+        }
     }, []);
 
     return (

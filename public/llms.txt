@@ -21,8 +21,30 @@
 - **LED Backlit Signs:** High-impact illuminated signs with a sophisticated halo effect.
 
 ## Key Differentiators
-- **In-House Fabrication:** Design, fabrication (including CNC), and installation are all handled under one roof to control quality.
+- **In-House Fabrication:** Design, fabrication (including CNC routing & paint booth), and installation are all handled under one roof to control quality.
+- **Turnkey Permitting:** Full-service municipal sign permit navigation across all 10 GTA municipalities.
 - **Enterprise Experience:** Trusted by local businesses and national brands like Uber, Telus, and York University.
+- **Quality Materials:** Architectural-grade aluminum, 3M and Avery Dennison cast vinyls, and 50,000+ hour rated LEDs.
+
+## Typical Project Pricing (GTA)
+- **Channel Letters:** $3,000 to $15,000+ CAD (depends on font, sizing, front-lit vs halo-lit, and mounting).
+- **Storefront Fascia & Lightbox Signs:** $2,500 to $12,000+ CAD.
+- **Commercial Vehicle Wraps:** $2,500 to $6,500+ CAD (partial decals to full fleet wraps).
+- **Pylon & Freestanding Signs:** $10,000 to $35,000+ CAD (including engineering, footing, and crane install).
+- **Reception & 3D Lobby Signs:** $1,200 to $5,000+ CAD.
+
+## Municipal Permitting Hub
+We maintain detailed 2026 municipal sign permit bylaw guides, fee estimators, and timelines for:
+- Toronto: https://www.custombusinesssigns.ca/sign-permits/toronto
+- Vaughan: https://www.custombusinesssigns.ca/sign-permits/vaughan
+- Mississauga: https://www.custombusinesssigns.ca/sign-permits/mississauga
+- Brampton: https://www.custombusinesssigns.ca/sign-permits/brampton
+- Markham: https://www.custombusinesssigns.ca/sign-permits/markham
+- Richmond Hill: https://www.custombusinesssigns.ca/sign-permits/richmond-hill
+- Oakville: https://www.custombusinesssigns.ca/sign-permits/oakville
+- Burlington: https://www.custombusinesssigns.ca/sign-permits/burlington
+- Ajax: https://www.custombusinesssigns.ca/sign-permits/ajax
+- Pickering: https://www.custombusinesssigns.ca/sign-permits/pickering
 
 ## Contact Information
 - **Phone:** +1 (905) 597-8635
@@ -32,5 +54,18 @@
 ## Important Pages
 - homepage: https://www.custombusinesssigns.ca/
 - services: https://www.custombusinesssigns.ca/services
+- channel-letters: https://www.custombusinesssigns.ca/services/channel-letters
+- storefront-signs: https://www.custombusinesssigns.ca/services/storefront-signs
+- vehicle-wraps: https://www.custombusinesssigns.ca/services/vehicle-wraps
+- illuminated-signs: https://www.custombusinesssigns.ca/services/illuminated-signs
+- pylon-signs: https://www.custombusinesssigns.ca/services/pylon-signs
+- indoor-signs: https://www.custombusinesssigns.ca/services/indoor-signs
+- 3d-signs-lettering: https://www.custombusinesssigns.ca/services/3d-signs-lettering
+- window-graphics: https://www.custombusinesssigns.ca/services/window-graphics
+- construction-signs: https://www.custombusinesssigns.ca/services/construction-signs
+- digital-signs: https://www.custombusinesssigns.ca/services/digital-signs
+- awning-graphics: https://www.custombusinesssigns.ca/services/awning-graphics
+- led-backlit-signs: https://www.custombusinesssigns.ca/services/led-backlit-signs
+- sign-permits: https://www.custombusinesssigns.ca/sign-permits
 - about: https://www.custombusinesssigns.ca/about
 - contact: https://www.custombusinesssigns.ca/contact

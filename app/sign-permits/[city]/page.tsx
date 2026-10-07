@@ -31,12 +31,47 @@ export default async function CityPermitPage({ params }: { params: Promise<{ cit
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: `${permit.city} Sign Permit Guide 2026`,
+    "@id": `https://www.custombusinesssigns.ca/sign-permits/${permit.slug}#article`,
+    headline: `${permit.city} Sign Permit Guide (2026)`,
     description: `Complete guide to ${permit.city} sign permit fees, requirements, and application processing times.`,
+    datePublished: "2026-01-01T08:00:00-05:00",
+    dateModified: "2026-10-01T08:00:00-05:00",
+    mainEntityOfPage: `https://www.custombusinesssigns.ca/sign-permits/${permit.slug}`,
     publisher: {
       "@type": "Organization",
+      "@id": "https://www.custombusinesssigns.ca/#localbusiness",
       name: "Custom Business Signs Toronto"
+    },
+    author: {
+      "@type": "Organization",
+      name: "Custom Business Signs Toronto",
+      url: "https://www.custombusinesssigns.ca"
     }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.custombusinesssigns.ca"
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Sign Permits",
+        item: "https://www.custombusinesssigns.ca/sign-permits"
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: `${permit.city} Sign Permits`,
+        item: `https://www.custombusinesssigns.ca/sign-permits/${permit.slug}`
+      }
+    ]
   };
 
   return (
@@ -44,6 +79,10 @@ export default async function CityPermitPage({ params }: { params: Promise<{ cit
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {/* Hero */}
       <section className="bg-surface-cream border-b border-surface-light pt-36 pb-16">

@@ -37,14 +37,44 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": `https://www.custombusinesssigns.ca/services/${slug}#service`,
     name: service.title,
     description: service.shortDescription,
     provider: {
       "@type": "LocalBusiness",
+      "@id": "https://www.custombusinesssigns.ca/#localbusiness",
       name: "Custom Business Signs Toronto"
     },
-    areaServed: "Greater Toronto Area",
+    areaServed: {
+      "@type": "AdministrativeArea",
+      name: "Greater Toronto Area"
+    },
     image: `https://www.custombusinesssigns.ca${service.image}`
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.custombusinesssigns.ca"
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: "https://www.custombusinesssigns.ca/services"
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: service.title,
+        item: `https://www.custombusinesssigns.ca/services/${slug}`
+      }
+    ]
   };
 
   return (
@@ -52,6 +82,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {/* Header */}
       <section className="bg-surface-cream border-b border-surface-light pt-36 pb-12">
